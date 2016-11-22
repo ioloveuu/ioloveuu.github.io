@@ -3,10 +3,83 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style type="text/css">
+	body{ 
+		margin: 0;
+	}
+	/*针对body和html元素的设置可以对页面设置滚动条*/
+	html{ 
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	body{
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+	}
+	.clearfix:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.headbox{ 
+		height: 179px;
+		width: 100%;
+		background: #ef3239;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.list{
+		margin-top: 179px;
+		font-size: 30px;
+	}
+	.list .item{
+		overflow: auto;
+		float: left;
+		width: 10em;
+		height: 10em;
+		margin: 0.3em;
+		border: 1px solid black;
+		box-sizing: border-box;
+		list-style: none;
+	}
+	</style>
+	<!-- 
+	px 固定单位:
+	% 相对单位: 只能在确定范围值的前提下控制宽度，不能控制高度，并且会导致变形
+	em 相对单位: 当前字体大小
+	会根据当前容器字体大小改变，但如果每个容器字体大小不一样，换算会十分繁琐
+	rem 相对字体大小 只依赖于HTML字体大小控制
+	 -->
+	<script type="text/javascript">
+	var pixelRatio = 1 / window.devicePixelRatio;
+	console.log(pixelRatio);
+	//通过js动态设置视口大小
+	document.write('<meta charset="UTF-8" name="viewport" content="width = device-width, user-scalable = no, initial-scale = '+pixelRatio+', minimum-scale = '+pixelRatio+', maximum-scale = '+pixelRatio+',">');
+	</script>
 </head>
+<!-- 
+布局步骤：
+	1.确定尺寸(设计稿);
+	2.搭建大体框架;  理解怪异盒模型
+
+ -->
 <body>
-	<h1>Hello,</h1>
-	<h2>this is my blog,<h2>
-	<h2>this is my precious!Gollum~</h2> 
+	<header class="headbox">
+		<div class="head_top"></div>
+		<div class="head_type"></div>
+	</header>
+	<ul class="list clearfix">
+		<li class="item">111</li>
+		<li class="item"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+		<li class="item"></li>
+	</ul>
 </body>
 </html>
