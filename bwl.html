@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bwl</title>
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+        html{ 
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+    .top{
+        margin:0 auto;
+        width:100%;
+        height:50px;
+        border-bottom: 1px solid black;
+        background: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .h1,.h2,.h3 {
+        line-height: 45px;
+        text-align: center;
+        float:right;
+        width:90px;
+        height:50px;
+    }
+    .h1{
+        margin-right: 42%;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .h2 a{
+        font-size: 18px;
+        color: orange;
+    }
+    #content{
+        margin-top: 40px;
+        border-bottom: 1px solid black;
+        line-height: 45px;
+    }
+    #content a{
+        color: black;
+    }
+    #content .content_head{
+        border-bottom: 1px solid black;
+        line-height: 45px;
+        text-indent: 10px;
+    }
+/*    #content .content_delete{
+        border-bottom: 1px solid black;
+    }*/
+    .indent{
+/*        text-indent: 18px;*/
+        margin-left: 18px; 
+    }
+    .bar{
+        border-bottom: 1px solid black;
+    }
+    #bot{
+        width: 100%;
+        border-top: 1px solid black;
+        margin-top: 19%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: red;
+    }
+    #bot .h3{
+        margin-right: 1.5%;
+    }
+    #bot .h3 a{
+        font-size: 18px;
+        color: orange;
+}
+    .re{
+        font-size: 24px;
+        color: orange;
+        font-weight: bold;
+    }
+    </style>
+
+</head>
+<body>
+<div class="top">
+    <span class="re"><</span>
+    <div class="h2"><a href="#">编辑</a></div>
+    <div class="h1">文件夹</div>
+</div>
+<div id="content">
+    <div class="content_head">
+        <a href="#">我的IPHONE</a>
+    </div>
+    <div class="indent bar"><a href="#">所有我的IPHONE</a></div>
+    <div class="indent bar"><a href="#">备忘录</a></div>
+    <div id="custom">
+        <div class="indent bar "><a href="#">自定义1</a></div>
+        <div class="indent bar "><a href="#">自定义2</a></div>
+        <div class="indent bar "><a href="#">自定义3</a></div>
+        <div class="indent bar "><a href="#">自定义1</a></div>
+        <div class="indent bar "><a href="#">自定义2</a></div>
+        <div class="indent bar "><a href="#">自定义3</a></div>
+    </div>
+    <div class="content_delete indent"><a href="#">最近删除</a></div>
+</div>
+<div id="bot">
+    <div class="h3"><a href="#">新建文件夹</a></div>
+</div>
+<script type="text/javascript">
+    var content =document.getElementById("costom");
+    var str = "";
+    for(var i=0;i<4;i++){
+        str+=`
+        <div class="indent bar "><a href="#">自定义${i}</a></div>
+        `;
+    }
+// console.log(content.innerHTML)
+    custom.innerHTML+=str;
+</script>
+</body>
+</html>
