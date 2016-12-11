@@ -1,0 +1,101 @@
+
+*{
+	padding:0;margin:0;border-radius:10px;list-style:none ;
+}
+body{
+	font-family:"Microsoft YaHei",微软雅黑,Arial,Simsun,sans-serif;
+	background:#FFFCEC;
+}
+.game_box{
+	margin:20px auto;
+	width:400px;
+}
+.info{
+	height:60px;
+	color:#333;
+	font-size:32px;
+}
+.main_box{
+	border:2px solid #8E8E8E;
+	background-color:#bbafa0;;
+	height:396px;
+	color:#333;
+	font-size:36px;
+	font-weight:700;
+	text-align:center;
+	line-height:100px;
+}
+.main_box li{
+	float:left;
+	background: rgba(238, 228, 218, 0.35);
+	margin:4px;
+	height:91px;
+	width:91px;
+}
+.rule{
+	color:#333;
+	font-size:16px;
+}
+.main_box li div{
+	height:91px;
+	width:91px;
+}
+    .n2{
+        background: #eee4da;
+        box-shadow: 0 0 3rem 1rem rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0);
+    }
+    
+    .n4{
+        background: #ede0c8;
+        box-shadow: 0 0 3rem 1rem rgba(243, 215, 116, 0), inset 0 0 0 .1rem rgba(255, 255, 255, 0);
+    }
+    
+    .n8{
+        color: #f9f6f2;
+        background: #f2b179;
+    }
+    
+    .n16{
+        color: #f9f6f2;
+        background: #f59563;
+    }
+    
+    .n32{
+        color: #f9f6f2;
+        background: #f67c5f;
+    }
+    
+    .n64{
+        color: #f9f6f2;
+        background: #f65e3b;
+    }
+    
+    .n128{
+        color: #f9f6f2;
+        background: #edcf72;
+        box-shadow: 0 0 3rem 1rem rgba(243, 215, 116, 0.2381), inset 0 0 0 1px rgba(255, 255, 255, 0.14286);
+    }
+    
+    .n256{
+        color: #f9f6f2;
+        background: #edcc61;
+        box-shadow: 0 0 3rem 1rem rgba(243, 215, 116, 0.31746), inset 0 0 0 1px rgba(255, 255, 255, 0.19048);
+    }
+    
+    .n512{
+        color: #f9f6f2;
+        background: #edc850;
+        box-shadow: 0 0 3rem 1rem rgba(243, 215, 116, 0.39683), inset 0 0 0 1px rgba(255, 255, 255, 0.2381);
+    }
+    
+    .n1024{
+        color: #f9f6f2;
+        background: #edc53f;
+        box-shadow: 0 0 3rem 1rem rgba(243, 215, 116, 0.47619), inset 0 0 0 1px rgba(255, 255, 255, 0.28571);
+    }
+    
+    .n2048{
+        color: #f9f6f2;
+        background: #edc22e;
+        box-shadow: 0 0 3rem 1rem rgba(243, 215, 116, 0.55556), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
+    }	  	
