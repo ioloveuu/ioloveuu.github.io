@@ -1,0 +1,1055 @@
+        @charset="UTF-8";
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        em{
+            font-style: normal;
+        }
+        a{
+            outline: none;
+        }
+        html,body{
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            font-family: '微软雅黑';
+            cursor: context-menu;
+        }
+        a{
+            color: #656565;
+            text-decoration: none;
+            font-family: tahoma, arial, 宋体;
+        }
+        .bold{
+            font-weight: bold;
+        }
+
+        .clearfix:after{
+            content: '.';
+            display: block;
+            visibility: hidden;
+            height: 0;
+            line-height: 0;
+            font-size: 0;
+            clear: both;
+        }
+        .clearfix{
+            zoom:1;
+        }
+
+        /*header*/
+        #header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #252525;
+            min-width: 1200px;
+            height: 50px;
+            width:100%;
+            box-shadow: 0 0 6px 3px #666;   
+        }
+        #header .header_left{
+            height: 100%;
+            float: left;
+        }
+        #header .header_right{
+            font-family:tahoma,arial,"宋体"!important;
+            height: 100%;
+            float: right;
+        }
+        #logo{
+            float: left;
+            width: 121px;
+            height:100%;
+            background-position: 10px 5px;
+        }
+        #nav{
+            margin-left: 30px;
+            float: left;
+            height: 50px;
+        }
+        #nav li{
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            width: 90px;
+            height: 50px;
+            font-size: 18px;
+            float: left;
+            cursor: pointer;
+            margin-right: 2px;
+        }
+        #nav li:hover{
+            background-color: #0f0f0f;
+        }
+        #nav li.navActive{
+            font-weight: bold;
+/*          background: url(img/left_b.png) no-repeat;
+            background-position:-56px 15px;*/
+            background-color: #0f0f0f;
+        }
+        #vip{
+            font-size: 12px;
+            float: left;
+        }
+        #vip  a{
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            color: #e15f00;
+            text-decoration: none;
+        }
+        #vip  a:hover{
+            text-decoration: underline;
+        }
+        #search{
+            font-size: 12px;
+            margin-left: 13px;
+            float: left;
+            height: 50px;
+            line-height: 50px;
+            margin-right: 8px;
+        }
+        #search input{
+            font-size: 12px;
+            height: 22px;
+            border: none;
+            border:1px solid #000;
+            outline: none;
+        }
+        #search input.searchText{
+            text-indent: 4px;
+            line-height: 22px;
+            color: #999999;
+            width: 114px;
+            border-right: none;
+        }
+        #search input.searchButton{
+            line-height: 22px;
+            width: 38px;
+            height: 24px;
+            border-left: none;
+            cursor: pointer;
+        }
+        #header .header_right .shutiao{
+            margin-top: 16px;
+            width: 1px;
+            height: 16px;
+            border-left: 1px solid #393939;
+            float: left;
+            display: inline-block;
+            line-height: 50px;
+            color: #393939;
+        }
+        #header #user{
+            color: #d8d8d8;
+            font-family: '宋体';
+            font-size: 12px;
+            text-indent: 26px;
+            padding-right:28px; 
+            width: auto;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+            position: relative;
+        }
+        #header #user em.huanguan{
+/*            background-image: url(../img/frame-icon.png);*/
+            background-repeat: no-repeat;
+            background-position: -183px -4px;
+            position: absolute;
+            top:18px;
+            left: 7px;
+            display: block;
+            width: 17px;
+            height: 15px;
+        }
+        #header #user em.arrow{
+            top: 21px;
+            right: 11px;
+        }
+
+        em.arrow{
+            position: absolute;
+            display: block;
+            width: 11px;
+            height: 6px;
+            background-image: url(../img/left_b.png);
+            background-repeat: no-repeat;
+            background-position: -126px -10px;
+        }
+        #vipCenter{
+            height: 100%;
+            float: left;
+            margin: 13px 7px 0 12px;
+        }
+        #vipCenter a{
+            display: inline-block;
+            border-radius: 2px;
+            text-align: center;
+            color: #fff;            
+            width: 70px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+            float: left;
+            color: #d8d8d8;
+            background-color: #e82b1a;
+        }
+        #header #DOWNLOAD{
+            float: left;
+            height: 100%;
+            width: 80px;
+            text-align: center;
+        }
+        #header #DOWNLOAD a{
+            color: #d8d8d8;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 50px;
+        }
+        #header .notice{
+            color: #d8d8d8;
+            float: left;
+            height: 100%;
+            width:44px;
+            text-align: center;
+        }
+        #header .notice a{
+            display: inline-block;
+            color: #d8d8d8;
+            font-size: 12px;
+            line-height: 50px;
+        }
+        #header .moreInfo{
+            position: relative;
+            float: left;
+            height: 100%;
+            width: 64px;
+        }
+        #header .moreInfo a{
+            color: #d8d8d8;
+            text-indent: 12px;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 50px;
+        }
+        #header .moreInfo em.arrow{
+            top: 21px;
+            left: 44px;
+        }
+        #side{
+            position: absolute;
+            top:50px;
+            left: 0;
+            width: 209px;
+            min-height: 540px;
+            bottom: 0px;    
+            /*height: 100%;*/
+            background-color: #f0f0f0;
+        }
+        #side  ul.sidemenu{
+            margin-top: 14px;
+        }
+        #side  ul.sidemenu li{
+            cursor: pointer;
+            position: relative;
+            font-family: tahoma, arial, 宋体;
+            height: 31px;
+/*          background-color: #dfdfdf;
+            border-top: 1px solid #d2d2d2;
+            border-bottom:1px solid #d2d2d2;*/
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 31px;
+            text-indent: 66px;
+            box-sizing: border-box;
+        }
+
+        #side  ul.sidemenu li:hover{
+            line-height: 29px;
+            background-color: #dfdfdf;
+            border-top: 1px solid #d2d2d2;
+            border-bottom:1px solid #d2d2d2;
+            background-color: #dfdfdf;
+        }
+        #side  ul.sidemenu li.active{
+            font-weight: bold;
+            line-height: 31px;
+            background-color: #dfdfdf;
+            border-top: 1px solid #d2d2d2;
+            border-bottom:1px solid #d2d2d2;
+        }
+        #side  ul.sidemenu li .imgIco{
+            position: absolute;
+            top: 6px;
+            left: 32px;
+            width: 23px;
+            height: 22px;
+            background:url(../img/left.png) no-repeat;
+        }
+        #side  ul.sidemenu li.active .imgIco,#side ul li:hover .imgIco{
+            top: 5px;
+        }
+        #side  ul.sidemenu li .disk{
+            background-position:0 0;
+        }
+        #side  ul.sidemenu li .pic{
+            background-position:0 -22px;
+        }
+        #side  ul.sidemenu li .doc{
+            background-position:0 -44px;
+        }
+        #side  ul.sidemenu li .video{
+            background-position:0 -88px;
+        }
+        #side  ul.sidemenu li .bt{
+            background-position:0 -201px;
+        }
+        #side  ul.sidemenu li .music{
+            background-position:0 -66px;
+        }
+        #side  ul.sidemenu li .oth{
+            background-position:0 -177px;
+        }
+
+        #side  ul.sidemenu li .share{
+            background-position:0 -131px;
+        }
+        #side  ul.sidemenu li .recycle{
+            background-position:0 -152px;
+        }
+
+        #side  ul.sidemenu li.active .disk,#side ul li:hover .disk{
+            background-position:-23px 0;
+        }
+        #side  ul.sidemenu li.active .pic,#side ul li:hover .pic{
+            background-position:-23px -22px;
+        }
+        #side  ul.sidemenu li.active .doc,#side ul li:hover .doc{
+            background-position:-23px -44px;
+        }
+        #side  ul.sidemenu li.active .video,#side ul li:hover .video{
+            background-position:-23px -88px;
+        }
+        #side  ul.sidemenu li.active .bt,#side ul li:hover .bt{
+            background-position:-23px -201px;
+        }
+        #side  ul.sidemenu li.active .music,#side ul li:hover .music{
+            background-position:-23px -66px;
+        }
+        #side  ul.sidemenu li.active .oth,#side ul li:hover .oth{
+            background-position:-23px -177px;
+        }
+        #side  ul.sidemenu li.active .share,#side ul li:hover .share{
+            background-position:-23px -131px;
+        }
+        #side  ul.sidemenu li.active .recycle,#side ul li:hover .recycle{
+            background-position:-23px -152px;
+        }
+        #side .sideOptions{
+            position: relative;
+            width: 184px;
+            font-size: 12px;
+            margin: 20px 0 20px 18px;
+        }
+        #side .sideOptions a{
+            text-align: center;
+            display: block;
+            width: 42px;
+            height: 53px;
+            padding-right: 4px;         
+            float: left;
+        }
+        #side .sideOptions a span{
+            display: block;
+            width: 40px;
+            height: 35px;
+            background: url(../img/left_b.png) no-repeat;
+        }
+        #side .sideOptions a:hover{
+            color: #0a68d1;
+        }
+                    
+        #side .sideOptions a.yungj span{
+            background-position:10px -66px;
+        }
+        #side .sideOptions a.Android span{
+            background-position:-60px -66px;
+        }
+        #side .sideOptions a.iPhone span{
+            background-position:10px -96px;
+        }
+        #side .sideOptions a.more span{
+            background-position:-25px -66px;
+        }
+
+        #side .sideOptions a.yungj:hover span{
+            background-position:-25px -66px;
+        }
+        #side .sideOptions a.Android:hover span{
+            background-position:-95px -66px;
+        }
+        #side .sideOptions a.iPhone:hover span{
+            background-position:-25px -96px;
+        }
+        #side .sideOptions a.more:hover span{
+            background-position:-25px -66px;
+        }
+
+
+        #side .sideOptions a.more{
+            width: 32px;
+        }       
+        #side .sideOptions a.more span{
+            background-position:-203px -66px;
+            width: 32px;
+        }
+
+        #side .sideOptions a.more:hover{
+
+            width: 32px;
+        }
+        #side .sideOptions a.more:hover span{
+            background-position:-238px -66px;
+        }
+        .itemSeparator{         
+            display: none;
+            margin: 5px 0;
+            border-top: #dce1e6 1px solid;
+            border-bottom: #f7f9fb 1px solid;
+            height: 0;
+        }
+
+        #main{      /*z-index: 1;*/
+
+            color: #666;
+            top: 50px;
+            left: 209px;
+            bottom: 0px;
+            right: 0px; 
+            position: absolute;
+            border-left: 1px solid #C6C8CC;
+            box-shadow:0 0 2px 2px #C6C8CC;
+        }
+        #main .dom{
+            min-width: 1000px;
+            background-color: #F7F7F7;
+            border-bottom: 1px solid #C6C8CC;   
+        }
+        #main .dom .toolbar{
+            height: 28px;
+            padding: 11px 20px;
+            margin-right: 82px;
+            min-width: 950px;
+        }
+        #main .dom .toolbar a{
+            position: relative;
+            height: 28px;
+            font-size: 12px;
+            line-height: 28px;
+            /*display: block;*/
+            background: url(../img/btn.png) no-repeat;
+            float: left;
+            color: #666;
+        }
+        #main .dom .toolbar a em{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 28px;
+            width: 5px;
+            background: url(../img/btn.png) no-repeat;
+        }
+        #main .dom .toolbar a span{
+            position: absolute;
+            top: 2px;
+            left: 17px;
+            display: block;
+            height: 25px;
+            width: 19px;
+            background: url(../img/top.png) no-repeat;
+        }
+
+        #main .dom .toolbar a.upload{
+            margin-left: 5px;
+            display: block;
+            width: 107px;
+            color: #fff;
+            text-indent: 49px;
+            background-position: -90px -645px;  
+        }
+        #main .dom .toolbar a.upload em{
+            background-position: 0px -645px;    
+        }
+
+        #main .dom .toolbar a.upload:hover{
+            background-position: -90px -683px;  
+        }
+        #main .dom .toolbar a.upload:hover em{
+            background-position: 0px -683px;    
+        }
+
+
+        #main .dom .toolbar a.newfolder{
+            margin-left: 9px;
+            display: block;
+            width: 115px;
+            
+            text-indent: 40px;
+            background-position: -82px -144px;  
+        }
+        #main .dom .toolbar a.newfolder em{
+            background-position: 0px -144px;    
+        }
+
+        #main .dom .toolbar a.newfolder span{
+            background-position: -150px 0px;
+        }
+        
+        #main .dom .toolbar a.newfolder:hover {
+            background-position: -82px -180px;  
+        }
+
+        #main .dom .toolbar a.newfolder:hover em{
+            background-position: 0px -180px;    
+        }
+
+        #main .dom .toolbar a.newfolder:hover span{
+            background-position: -180px 0px;
+        }
+
+
+        #main .dom .toolbar a.escdown{
+            margin-left: 9px;
+            display: block;
+            width: 103px;           
+            text-indent: 40px;
+            background-position: -94px -144px;  
+        }
+        #main .dom .toolbar a.escdown em{
+            background-position: 0px -144px;    
+        }
+
+        #main .dom .toolbar a.escdown span{
+            background-image: url(../img/myshebei.png);
+            background-position: 0px 0px;
+        }
+
+        
+        #main .dom .toolbar a.escdown:hover {
+            background-position: -94px -180px;  
+        }
+
+        #main .dom .toolbar a.escdown:hover em{
+            background-position: 0px -180px;    
+        }
+
+        #main .dom .toolbar a.escdown:hover span{
+            background-image: url(../img/myshebei.png);
+            background-position: -30px 0px;
+        }
+
+
+        #main .dom .toolbar a.myphone{
+            margin-left: 9px;
+            display: block;
+            width: 115px;
+            
+            text-indent: 40px;
+            background-position: -82px -260px;  
+        }
+        #main .dom .toolbar a.myphone em{
+            background-position: 0px -260px;    
+        }
+
+        #main .dom .toolbar a.myphone span{
+            background-image: url(../img/myshebei.png);
+            background-position: -60px 0px;
+        }
+
+        #main .dom .toolbar a.myphone:hover{
+            background-position: -82px -296px;  
+        }
+        #main .dom .toolbar a.myphone:hover em{
+            background-position: 0px -296px;    
+        }
+
+        #main .dom .toolbar a.myphone:hover span{
+            background-image: url(../img/myshebei.png);
+            background-position: -90px 0px;
+        }
+
+        #main .dom .select{
+            position: relative;
+            width: 64px;
+            height: 29px;
+            float: right;
+            margin: 12px 18px 0 0;
+        }
+        #main .dom .select a{
+            float: right;
+            width: 32px;
+            height: 29px;
+        }
+        #main .dom .select a.listSwitch{
+            background-position: -33px -35px;
+        }
+        #main .dom .select a.gridSwitch{
+            background-position: 0 -35px;
+        }
+        
+        #main  .folderList{
+            height: 100%;
+        }
+        #main  .folderList .history{
+            height: 30px;
+            width: 100%;
+            line-height: 30px;
+            position: relative;
+        }
+        #main  .folderList .history ul{
+            display: none;
+            font-family: tahoma, arial, '宋体';
+            position: absolute;
+            background-color: #fff;
+            top: 0;
+            left: 0;
+            height: 29px;
+            line-height: 29px;
+            font-size: 12px;
+            margin-left: 20px;
+            min-width: 100px;
+        }
+        #main  .folderList .history ul.historyListManager li{
+            display: inline-block;
+            background-color: #fff;
+        }
+
+        #main  .folderList .history ul.historyListManager li .historylistmanager-separator{
+            color: #aaa;
+        }
+        #main .folderList .history .span1{
+            font-size: 12px;
+            margin-left: 20px;
+            float: left;
+            display: inline-block;
+        }
+
+        #main .folderList .history  a{
+            font-size: 12px;
+            color: #06c;
+        }
+        #main .folderList .history  a:hover{
+            text-decoration: underline;
+        }
+
+        #main .folderList .history em{
+            font-size: 12px;
+            margin-right: 21px;
+            float: right;
+        }
+        #main  .folderList .operateArea{
+            font-size: 12px;
+            min-width: 850px;
+            height: 41px;
+            border:1px solid #d2d2d2;
+            border-right: none;
+            margin-left: 10px;
+            border-radius: 3px 0 0 3px;
+            background-color: #f7f7f7;
+        }
+
+        #main  .folderList .operateArea .checkAll{
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-left: 11px;
+            margin-top: 14px;
+            background: url(../img/checkbox.png) no-repeat;
+            background-position: 0 0;
+            float: left;
+        }
+        #main  .folderList .operateArea .countTips{
+            height: 100%;
+            font-size: 12px;            
+            display: inline-block;
+            width: 145px;
+            float: left;
+            line-height: 41px;
+            text-indent: 11px;
+        }
+
+        #main  .folderList .operateArea .ico1{
+            display: block;
+            position: relative;
+            float: left;
+            width: 79px;
+            height: 28px;
+            line-height: 28px;
+            background: url(../img/btn.png) no-repeat;
+            background-color: #fff;
+            background-position:-118px -144px;
+            margin-top: 7px;
+            text-indent: 40px;
+            margin-left: 9px;
+        }
+
+        #main  .folderList .operateArea .ico1 span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 28px;       
+            background: url(../img/btn.png) no-repeat;
+            background-color: #fff;
+            background-position:0px -144px;         
+        }
+
+        #main  .folderList .operateArea .ico1:hover{
+            background-position:-118px -180px;
+        }
+
+        #main  .folderList .operateArea .ico1:hover span{
+            background-position:0px -180px;         
+        }
+
+        #main  .folderList .operateArea .ico1 em{
+            position: absolute;
+            top: 6px;
+            left: 16px;
+            width: 19px;
+            height: 18px;
+            background: url(../img/myshebei.png) no-repeat;            
+        }
+
+        #main  .folderList .operateArea .ico1 em.share{
+            background-position:-180px -4px;
+        }
+        #main  .folderList .operateArea .ico1 em.down{
+            background:url(../img/top.png) no-repeat;
+            background-position:-59px -4px;
+        }
+        #main  .folderList .operateArea .ico1.delete em{
+            background:url(../img/top.png) no-repeat;
+            background-position:-208px -4px;
+        }
+
+        #main  .folderList .operateArea .delete.ico1:hover em{
+            background:url(../img/top.png) no-repeat;
+            background-position:-268px -4px;
+        }
+
+
+        #main  .folderList .operateArea .ico2{
+            display: block;
+            position: relative;
+            float: left;
+            width: 139px;
+            height: 28px;
+            line-height: 28px;
+            background: url(../img/btn.png) no-repeat;
+            background-color: #fff;
+            background-position:-58px -260px;
+            margin-top: 7px;
+            text-indent: 40px;
+            margin-left: 9px;
+        }
+        
+        #main  .folderList .operateArea .ico2 em{
+            position: absolute;
+            top: 6px;
+            left: 16px;
+            width: 19px;
+            height: 18px;
+            background: url(../img/myshebei.png) no-repeat;
+        }       
+        #main  .folderList .operateArea .ico2 span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 28px;       
+            background: url(../img/btn.png) no-repeat;
+            background-color: #fff;
+            background-position:0px -260px;     
+        }       
+        #main  .folderList .operateArea .ico2 em.deviceTool{
+            background-position: -120px -4px;
+        }
+
+        #main  .folderList .operateArea .ico3{
+            display: block;
+            position: relative;
+            float: left;
+            width: 67px;
+            height: 28px;
+            line-height: 28px;
+            background: url(../img/btn.png) no-repeat;
+            background-color: #fff;
+            background-position:-130px -144px;
+            margin-top: 7px;
+            text-align: center;
+            margin-left: 9px;
+        }
+        #main  .folderList .operateArea .ico3 span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 28px;       
+            background: url(../img/btn.png) no-repeat;
+            background-color: #fff;
+            background-position:0px -144px;     
+        }
+        #main .folderList .gridView{
+            height: 100%;
+            padding-left: 10px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        #main .folderList .gridView dd{
+            display: block;
+        }
+        #main .folderList .gridView dd .gridItem{
+            width: 142px;
+            height: 122px;
+            float: left;
+            margin: 4px 4px 0 0;
+            text-align: center;
+            position: relative;
+        }
+
+        #main .folderList .gridView dd .gridItem .rename{
+            position: absolute;
+            width: 100%;
+            height: 24px;
+            background-color: #fff;
+            bottom: 0;
+            left: 0;
+        }
+        #main .folderList .gridView dd .gridItem .rename input{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 75px;
+            height: 18px;
+            border: 1px solid rgb(210, 210, 210);
+            border-radius: 2px;
+            padding: 2px 3px;
+        }
+        #main .folderList .gridView dd .gridItem .rename span{
+            background:url(../img/btn_icon2.gif) no-repeat;
+            width: 22px;
+            height: 21px;
+            display: inline-block;
+            position: absolute;     
+            bottom: 1px;
+            cursor: pointer;
+        }
+        #main .folderList .gridView dd .gridItem .rename span._true{
+                left: 88px;
+                background-position: 0 -513px;          
+        }
+        #main .folderList .gridView dd .gridItem .rename span._false{
+                left: 117px;
+                background-position: -27px -513px;          
+        }
+
+        #main .folderList .gridView dd .dirLarge{
+            cursor: pointer;
+            position: relative;
+            margin: 0 auto;
+            width: 90px;
+            height: 92px;
+            border: 2px solid #FFF;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            background: url(../img/gridIcon.png) 16px -77px no-repeat;
+        }
+
+        #main .folderList .gridView dd .filename{
+            font-family: tahoma, arial, 宋体;
+            font-size: 12px;
+            color: #000;
+            display: block;
+            padding: 5px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+
+        #main .folderList .gridView dd .gridItem.hover .dirLarge,#main .folderList .gridView dd .gridItem.checked .dirLarge{
+            border: 2px solid #2e80dc;
+        }
+        
+        #main .folderList .gridView dd .dirLarge span{
+            display: none;
+        }
+        
+
+        #main .folderList .gridView dd .gridItem.checked .dirLarge span,#main .folderList .gridView dd .gridItem.hover .dirLarge span{
+            display: block;
+            position: absolute;
+            top:-2px;
+            left: -2px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        #main .folderList .gridView dd .gridItem.hover .dirLarge span{
+            background: url(../img/checkbox.png) no-repeat 0 -42px;
+        }
+
+        #main .folderList .gridView dd .gridItem.checked .dirLarge span{
+            background: url(../img/checkbox.png) no-repeat -36px -42px;
+        }
+        #operateDisplay{
+            display: none;
+        }
+        
+
+
+
+#confirmDelete{
+font-family: tahoma, arial, 宋体;
+position:fixed;
+margin:auto;
+left:0; 
+right:0; 
+top:0; 
+bottom:0;
+width:520px; 
+height:264px;
+border: 3px solid #999;
+box-shadow: 0 0 9px #999;
+z-index: 999;
+background-color: #fff;
+display: none;
+}
+
+#confirmDelete .header{
+height:42px;
+position: relative;
+cursor: move;
+}
+
+#confirmDelete .header h3{
+height:42px;
+}
+
+#confirmDelete .header h3 .title{
+color: rgb(51, 51, 51);
+display: block;
+margin-right: 42px;
+padding-top: 12px;
+white-space: nowrap;
+text-indent: 1em;
+font-size: 14px;
+}
+
+#confirmDelete .header .esc{
+position: absolute;
+top:10px;
+right: 10px;
+height: 20px;
+text-align: center;
+line-height: 42px;
+overflow: hidden;
+}
+
+#confirmDelete .header .esc span{
+display: inline-block;
+height: 20px;
+width: 20px;
+text-indent: 500px;
+background:url(../img/dialog-icon.png) no-repeat;
+cursor: pointer;
+}
+
+
+#confirmDelete .center{
+    height: 48px;
+    margin: 22px;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    font-size: 12px;
+    line-height: 24px;
+}
+
+#confirmDelete .footer{
+    height: 90px;
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+#confirmDelete .footer a{
+    display: inline-block;
+    margin: 10px 2px 23px;
+    background: url(../img/btn.png) no-repeat;
+    font-size: 14px;
+    height: 37px;
+    line-height: 37px;
+    padding-left: 50px;
+}
+
+#confirmDelete .footer a.confirm{
+    color: #fff;
+    background-position: left -370px;
+}
+#confirmDelete .footer a.confirm:hover{
+    color: #fff;
+    background-position: left -426px;
+}
+
+
+#confirmDelete .footer a.cancel{
+    background-position: left 0px;
+}
+#confirmDelete .footer a.cancel:hover{
+    background-position: left -47px;
+}
+
+
+#confirmDelete .footer a.confirm .backconfirm{
+    display: inline-block;
+    padding-right: 50px;
+    height: 37px;
+    background: url(../img/btn.png) no-repeat;
+    background-position: right -370px;
+}
+#confirmDelete .footer a.confirm:hover .backconfirm{
+    background-position: right -426px;
+}
+
+
+#confirmDelete .footer a.cancel .backcancel{
+    display: inline-block;
+    padding-right: 50px;
+    height: 37px;
+    background: url(../img/btn.png) no-repeat;
+    background-position: right 0px;
+}
+#confirmDelete .footer a.cancel:hover .backcancel{
+    background-position: right -47px;
+}
+
+
+
+div.selectDiv{
+    position: absolute;
+    border: 1px solid rgb(19, 98, 180);
+    opacity: 0.5; 
+    z-index: 99999;  
+    background-color: rgb(139, 191, 249);
+}
+
+

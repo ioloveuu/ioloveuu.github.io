@@ -1,0 +1,63 @@
+﻿
+var data = {
+    files:[
+        {
+            id:0,
+            pid:-1,
+            title:"全部",
+            type:"file"
+        },
+        {
+            id:1,
+            pid:0,
+            title:"我的视频",
+            type:"file"
+        },
+        {
+            id:600000,
+            pid:0,
+            title:"我的文件",
+            type:"file"
+        },
+        {
+            id:2,
+            pid:0,
+            title:"我的音乐",
+            type:"file"
+        },
+        {
+            id:3,
+            pid:2,
+            title:"古典",
+            type:"file"
+        },
+        {
+            id:4000,
+            pid:2,
+            title:"流行",
+            type:"file"
+        },
+        {
+            id:4,
+            pid:3,
+            title:"命运交响曲",
+            type:"file"
+        },
+        {
+            id:600,
+            pid:3,
+            title:"西班牙斗牛曲",
+            type:"file"
+        },
+        {
+            id:1,
+            pid:700,
+            title:"EZ",
+            type:"img"
+        },
+    ]
+};
+
+var dataDelete={
+    files:[]
+};
