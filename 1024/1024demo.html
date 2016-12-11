@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>1024</title>
+<!-- 
+小组成员：
+	朱周平，郭森林，毛慧雯，何东方
+	1024共同开发+朱周平(扫雷)+郭森林(贪吃蛇)+毛慧雯(翻牌找对)+何东方(布局)
+ -->
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="css/1024.css" media="screen" type="text/css" />
+</head>
+<body >
+	<div class='card-holder'>
+	  <div class='card-wrapper'>
+	    <a href="1024demo.html">
+	      <div class='card bg-01'>
+	        <span class='card-content'>
+	        	去往1024
+	    	</span>
+	      </div>
+	    </a>
+	  </div>
+	  <div class='card-wrapper' >
+	    <a href="snakeGame/index.html">
+	      <div class='card bg-02'>
+	        <span class='card-content'>
+				去往贪吃蛇
+	        </span>
+	      </div>
+	    </a>
+	  </div>
+	  <div class='card-wrapper'>
+	    <a href='bombdemo4.html'>
+	      <div class='card bg-03'>
+	        <span class='card-content'>去往扫雷</span>
+	      </div>
+	    </a>
+	  </div>
+	  <div class='card-wrapper'>
+	    <a href='cardGame/index.html'>
+	      <div class='card bg-04'>
+	        <span class='card-content'>去往翻牌找对</span>
+	      </div>
+	    </a>
+	  </div>
+	  <div class='card-wrapper'>
+	    <a href='#'>
+	      <div class='card bg-05'>
+	        <span class='card-content'>正在期待中...</span>
+	      </div>
+	    </a>
+	  </div>
+	</div>
+	<div class="game_box">
+		<div class="info">
+			<p style="float:right;">
+				得分：<span id="score">0</span>
+			</p>
+				最大值：<span id="maxValue">0</span>
+		</div>
+		<ul class="main_box">
+			<li id="t11"></li>
+			<li id="t12"></li>
+			<li id="t13"></li>
+			<li id="t14"></li>
+			<li id="t21"></li>
+			<li id="t22"></li>
+			<li id="t23"></li>
+			<li id="t24"></li>
+			<li id="t31"></li>
+			<li id="t32"></li>
+			<li id="t33"></li>
+			<li id="t34"></li>
+			<li id="t41"></li>
+			<li id="t42"></li>
+			<li id="t43"></li>
+			<li id="t44"></li>
+		</ul>
+	</div>
+<!-- Game Over!界面
+	<div id="gameOver">
+		<div>灰色半透明北景</div>
+        前景小窗
+        <p>Game Over!<br/>
+        Score:<span id="finalScore"></span><br/>
+        <a class="button" id="restart" style="font-size:30px;" onclick="game.start()">爱心 Try again!</a>
+        </p>    
+    </div> -->
+    <!-- <div style="float:right; color:red;"><a href="javascript:_play();">开始游戏</a></div> -->  
+</body>
+<script type="text/javascript" src="js/1024js2.js"></script>
+
+</html>
