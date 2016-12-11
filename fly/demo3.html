@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no"/>
+        <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="screen-orientation" content="portrait">
+        <title></title>
+    <script>
+        (function () {
+            var Ratio = 1 / window.devicePixelRatio; // (1/2)=0.5;
+            document.write('<meta name="viewport" content="width=device-width,initial-scale=' + Ratio + ',minimum-scale=' + Ratio + ',maximum-scale=' + Ratio + ',user-scalable=no" />');
+
+            window.pageSize = {};
+            var html = document.getElementsByTagName('html')[0];
+
+            var pageWidth = html.getBoundingClientRect().width;
+            var pageHeight = html.getBoundingClientRect().height;
+            html.style.fontSize = pageWidth / 10 + "px";
+            console.log(html.style.fontSize)
+            window.pageSize.width = pageWidth;
+            window.pageSize.height = pageHeight;
+            window.addEventListener('resize',function () {
+                var pageWidth = html.getBoundingClientRect().width;
+                var pageHeight = html.getBoundingClientRect().height;
+                html.style.fontSize = pageWidth / 10 + "px";
+                window.pageSize.width = pageWidth;
+                window.pageSize.height = pageHeight;
+            });
+        })();
+    </script>
+        <link href="./style/css.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="./js/m.touch.js"></script>
+        <script type="text/javascript" src="./js/zepto.js"></script>
+        <script type="text/javascript" src="./js/main1.2.js"></script>
+    </head>
+    <body>
+        <div id="game">
+            <div id="gameUI">
+                <div id="gameIntro">
+                    <h1>躲避</h1>
+                    <p>点击开始</p>
+                    <p><a id="gamePlay" class="button" href="">Play</a></p>
+                </div>
+                <div id="gameStats">
+                    <p>得分: <span class="gameScore"></span> 分</p>
+                    <p ><a class="gameReset" href="">重置</a></p>
+                </div>
+                <div id="gameComplete">
+                    <h1>游戏结束!</h1>
+                    <p>你的得分是 <span class="gameScore"></span> 分</p>
+                    <p><a class="gameReset button" href="">再来一次</a></p>
+                </div>
+            </div>
+            <canvas id="gameCanvas" >
+                您的浏览器不支持canvas
+            </canvas>
+            <audio id="gameSoundBackground" loop>
+                <source src="sounds/background.ogg">
+                <source src="sounds/background.mp3">
+            </audio>
+            <audio id="gameSoundThrust" loop>
+                <source src="sounds/thrust.ogg">
+                <source src="sounds/thrust.mp3">
+            </audio>
+            <audio id="gameSoundDeath">
+                <source src="sounds/death.ogg">
+                <source src="sounds/death.mp3">
+            </audio>
+        </div>
+    </body>
+</html>
