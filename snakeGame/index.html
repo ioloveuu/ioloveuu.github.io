@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贪吃蛇</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h1>贪吃蛇</h1>
+		<a id="newGame" href="javascript:_new_game();">New Game</a>
+		<div>分数：<span id="score">0</span></div>
+		<select name="difficult" id="difficult">
+			<option value="500">简单</option>
+			<option value="350">中等</option>
+			<option value="200">困难</option>
+			<option value="100">手残别点</option>
+			<option value="50">你hold不住</option>
+		</select>
+		<p>游戏介绍：<em style="color: blue;">方向键，上、下、左、右</em>控制蛇的前进方向。吃到食物，身体变长，碰到自己或者墙，游戏失败。<em style="color: blue;">空格键</em>可以暂停，继续游戏。</p><p><span style="color: red">（tip：如果感觉游戏难度不适合，可以暂停后重新选择难度）</span></p>
+	</div>
+	<div class="body">
+		<div class="playBG"><a class="play" href="javascript:_play();">开始游戏</a></div>
+		<table></table>
+	</div>
+	<script>
+		var table = document.getElementsByTagName('table')[0];
+		var num = 15;									//棋盘格的长度及宽度
+		var tbody = document.createElement('tbody');
+		for(var i=0;i<num;i++){
+			var tr = document.createElement('tr');
+			tbody.appendChild(tr)
+			for(var j=0;j<num;j++){
+				tr.appendChild(document.createElement('td'));
+			}
+		}
+		table.appendChild(tbody);
+	</script>
+	<script src="script.js"></script>
+</body>
+</html>

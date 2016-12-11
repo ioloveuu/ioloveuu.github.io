@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+	width:800px;
+	margin: 20px auto;
+	clear: both;
+}
+h1{
+	margin-bottom: 20px;
+}
+#newGame{
+	display: block;
+	margin: 10px 50px;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	border-radius: 10px; 
+	background: red;
+}
+.header{
+	margin-top: 60px;
+	float: right;
+	text-align: center;
+	width: 199px;
+}
+.body{
+	float: left;
+	position: relative;
+}
+.playBG{
+	z-index: 2;
+	position: absolute;
+	top: 0;left: 0;
+	width: 600px;
+	height: 600px;
+	background-color: rgba(96,96,96,0.4);  
+}
+.play{
+	display: block;
+	font-size: 40px;
+	color: #fff;
+	width: 200px;
+	height: 80px;
+	background-color: green;
+	border-radius: 30px;
+	line-height: 80px;
+	text-align: center;
+	margin: 260px 200px;
+}
+table{
+	border-collapse: collapse;
+	background-color: rgba(51,125,0,0.3);
+}
+td{
+	width: 39px;
+	height: 39px;
+	border: 1px solid #abc;
+	padding: 0;
+}
+td img{
+	height: 39px;
+	width: 39px;
+	vertical-align: middle;
+}
