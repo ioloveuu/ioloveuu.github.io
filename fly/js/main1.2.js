@@ -68,18 +68,19 @@ $(document).ready(function() {
             };
             // var xs = x/90 * 200 + 150;
             // var ys = y/90 * 200 + 100;
-            if ( x > 2 && x < 10 ) {
+            if ( x > 2 ) {
                 console.log('右边');
                 player.moveRight = true;
-            } else if ( x < -2 && x > -10 ) {
+            } else if ( x < -2 ) {
                 console.log('左边');
+                player.moveRight = false;
             } else if ( x < 2 && x > -2){
                 player.moveRight = false;
             }
-            if ( y > 78 && y < 88 ) {
+            if ( y > 78 ) {
                 player.moveUp = true;
                 console.log('上边');
-            } else if ( y > 92 && y < 112 ) {
+            } else if ( y > 92 ) {
                 console.log('下边');
                 player.moveDown = true;
             }else if ( y < 92 && y > 88) {
