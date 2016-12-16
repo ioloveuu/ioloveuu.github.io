@@ -54,10 +54,29 @@ $(document).ready(function() {
         this.moveDown = false;
         this.flameLength = 20;
     };
+        // 判断ios
+    function getIos(){
+          var u = navigator.userAgent;
+          return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
     function myFn(e) {
-            var y = Math.round(e.beta);//y
-            var z = Math.round(e.gamma);//Z
-            var x = Math.round(e.alpha);//x
+            var motion = e.accelerationIncludingGravity;
+            var x = 0;
+            var y = 0;
+            var z = 0;
+            //重力加速，IOS下所有的数值 和 安卓都是相反的
+            if(getIos()){
+                x = Math.round(e.alpha);
+                y = Math.round(e.beta);
+                z = Math.round(e.gamma);
+            }else{
+                x = -Math.round(e.alpha);
+                y = -Math.round(e.beta);
+                z = -Math.round(e.gamma);
+            }
+            // var y = Math.round(e.beta);//y
+            // var z = Math.round(e.gamma);//Z
+            // var x = Math.round(e.alpha);//x
             if (playGame == false) {
                 playGame = true;
                 soundBackground.currentTime = 0;
@@ -66,6 +85,7 @@ $(document).ready(function() {
                 animate();
                 timer();
             };
+            if(y)
             if ( x > 2 && x < 10 ) {
                 console.log('右边');
                 player.moveRight = true;
@@ -105,7 +125,6 @@ $(document).ready(function() {
             $(window).unbind("keyup");
             $(window).unbind("keydown");
             // removeEventListenerc
-            console.log(myFn)
             window.removeEventListener('deviceorientation', myFn);
             startGame();
         });
