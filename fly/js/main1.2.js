@@ -77,7 +77,7 @@ $(document).ready(function() {
             } else if ( x < 2 && x > -2){
                 player.moveRight = false;
             }
-            if ( y > 78 ) {
+            if ( y < 88 ) {
                 player.moveUp = true;
                 console.log('上边');
             } else if ( y > 92 ) {
