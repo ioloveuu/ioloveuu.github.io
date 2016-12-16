@@ -19,6 +19,9 @@ $(document).ready(function() {
     var arrowUp = 38;
     var arrowRight = 39;
     var arrowDown = 40;
+    var x = 0;
+    var y = 0;
+    var z = 0;
     // 提示层
     var ui = $("#gameUI");
     var uiIntro = $("#gameIntro");
@@ -54,10 +57,25 @@ $(document).ready(function() {
         this.moveDown = false;
         this.flameLength = 20;
     };
+    // 判断ios
+    function getIos(){
+          var u = navigator.userAgent;
+          return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+    }
     function myFn(e) {
-            var y = Math.round(e.beta);//y
-            var z = Math.round(e.gamma);//Z
-            var x = Math.round(e.alpha);//x
+            if(getIos()){
+                x = Math.round(e.alpha);
+                y = Math.round(e.beta);
+                z = Math.round(e.gamma);
+            }else{
+                x = -Math.round(e.alpha);
+                y = -Math.round(e.beta);
+                z = -Math.round(e.gamma);
+            }
+            console.log(x)
+            // y = Math.round(e.beta);//y
+            // z = Math.round(e.gamma);//Z
+            // x = Math.round(e.alpha);//x
             if (playGame == false) {
                 playGame = true;
                 soundBackground.currentTime = 0;
@@ -66,16 +84,29 @@ $(document).ready(function() {
                 animate();
                 timer();
             };
+            // 设想：用户一般45度角去手持手机，控制方向应该倾斜一个角度再回复平衡
+            // 控制方向不要用固定数值而是加减到一定范围去控制
+            // so我要记录一个当前值
+            // 左右边设想：
+            // player.x = x/180 * 100 + 150;
+            // player.y = y/90 * 200 + 100;
             // var xs = x/90 * 200 + 150;
             // var ys = y/90 * 200 + 100;
-            if ( x > 2 && x < 10 ) {
+            // if ( x > 2 && x < 10 ) {
+            //     console.log('右边');
+            //     player.moveRight = true;
+            // } else if ( x < -2 && x > -10 ) {
+            //     player.moveRight = false;
+            //     console.log('左边');
+            // } else if ( x < 2 && x > -2){
+            //     player.moveRight = false;
+            // }
+            if( x > 2 && x < 10 ){
                 console.log('右边');
                 player.moveRight = true;
-            } else if ( x < -2 && x > -10 ) {
+            }else{
                 player.moveRight = false;
                 console.log('左边');
-            } else if ( x < 2 && x > -2){
-                player.moveRight = false;
             }
             if ( y > 78 && y < 88 ) {
                 player.moveUp = true;
