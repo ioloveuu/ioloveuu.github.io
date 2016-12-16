@@ -66,21 +66,21 @@ $(document).ready(function() {
                 animate();
                 timer();
             };
-            if ( x > 20 && x < 30 ) {
-                // console.log('右边');
+            if ( x > 2 && x < 10 ) {
+                console.log('右边');
                 player.moveRight = true;
-            } else if ( x < -20 && x > -30 ) {
-                    // console.log('左边');
-            } else if ( x < 5 && x > -5){
+            } else if ( x < -2 && x > -10 ) {
+                console.log('左边');
+            } else if ( x < 2 && x > -2){
                 player.moveRight = false;
             }
-            if ( y > 70 && y < 80 ) {
+            if ( y > 78 && y < 88 ) {
                 player.moveUp = true;
-                // console.log('上边');
-            } else if ( y > 100 && y < 110 ) {
-                // console.log('下边');
+                console.log('上边');
+            } else if ( y > 92 && y < 112 ) {
+                console.log('下边');
                 player.moveDown = true;
-            }else if ( y < 95 && y > 85) {
+            }else if ( y < 92 && y > 88) {
                 player.moveUp = false;
                 player.moveDown = false;
             }
