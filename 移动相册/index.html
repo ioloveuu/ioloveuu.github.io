@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Document</title>
+    <script type="text/javascript" src="zepto.js"></script>
+    <style type="text/css">
+    *{margin: 0;padding: 0;}
+    .wrapper{width:100%;height: 200px;overflow: hidden;position: relative;}
+    .content{height:200px;}
+    .content>div{
+        float: left;
+        height: 200px;
+    }
+    .btn{position: absolute;bottom: 20px;width: 80%;text-align: center;}
+    .btn a{width: 10px;height: 10px;border-radius: 100%;display: inline-block;border: 1px solid #fff;margin:0 3px;}
+    .btn .active{background: #fff;}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div><img src="img/1.jpg" alt="1"></div>
+            <div><img src="img/2.jpg" alt="2"></div>
+            <div><img src="img/3.jpg" alt="3"></div>
+        </div>
+        <div class="btn"></div>
+    </div>
+    <script type="text/javascript">
+    $(function(){
+        var blt = (function () {
+            return new swipers();
+        })();
+        function swipers(){};
+        swipers.prototype.slider=function(tagName,propo){
+            document.addEventListener('touchmove', function (event) {
+                event.preventDefault();
+            }, false);
+            var parent = tagName.parent();
+            var _len = tagName.length;
+            for (var i = 0; i < _len; i++) {
+                $("<a>").appendTo(parent.next());
+            };
+            $("a").eq(0).addClass("active");
+            var imgLen = (1/_len)*100;
+            tagName.css("width",imgLen + "%");
+            parent.css("width",_len * 100+"%");
+            tagName.swipeLeft(function(){
+                blt.swipe(this,1,_len-1,propo);
+            })
+            tagName.swipeRight(function(){
+                blt.swipe(this,-1,0,propo);
+            });
+        }
+        swipers.prototype.swipe=function(key,value,length,propo){
+            var _len = propo.length;
+            var index = $(key).index();
+            var imgLen = (1/_len)*100;
+            var len = -imgLen * (index+value) + "%";
+            if (index == length) {
+                return false;
+            }else{
+                $(key).parent().css({
+                    '-webkit-transform':'translate('+len+')',
+                    '-moz-transform':'translate('+len+')',
+                    'transform':'translate('+len+')',
+                    '-webkit-transition':'500ms linear',
+                    '-moz-transition':'500ms linear',
+                    'transition':'500ms linear'
+                });
+                $("a").eq(index + value).addClass("active")
+                                       .siblings().removeClass('active');
+            }
+            return this;
+        }
+        var _img = $(".content>div");
+        blt.slider(_img,$(".content>div"));
+    })
+     
+    </script>
+</body>
+</html>
