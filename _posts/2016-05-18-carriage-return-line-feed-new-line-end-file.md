@@ -116,3 +116,36 @@ category: blog
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
   })();
 </script>
+date: 2015-09-26T15:53:48.377Z
+author:
+  type: github                # can be github, twitter, facebook or google
+  displayName: Guillaume Ro   # the name given by the service
+  url: 'https://www.facebook.com/app_scoped_user_id/10206218789092308/'
+  picture: 'https://www.gravatar.com/avatar/a0007a5a6e287b9e970c9466a7c80801'
+content: >-
+  Equitis Romani autem esse filium criminis loco poni ab accusatoribus neque
+  his iudicantibus oportuit neque defendentibus nobis.
+
+  Nam quod de pietate dixistis, est quidem ista nostra existimatio, sed
+  iudicium certe parentis; quid nos opinemur, audietis ex iuratis; quid
+  parentes sentiant, lacrimae matris incredibilisque maeror, squalor
+  patris et haec praesens maestitia, quam cernitis, luctusque declarat.
+  {%if page.comments %}
+  {% assign sorted_comments = (page.comments | sort: 'date') %}
+{% endif %}
+{% for c in sorted_comments %}
+  <div class="media">
+    <div class="media-left">
+      <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
+    </div>
+    <div class="media-body">
+      <p class="text-muted">
+        <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
+        on {{ c.date | date_to_string }}
+      </p>
+      <p>{{ c.content | newline_to_br }}</p>
+    </div>
+  </div>
+{% else %}
+  There are no comments on this post.
+{% endfor %}
