@@ -115,7 +115,8 @@ category: blog
       commentit.src = 'https://commentit.io/static/embed/dist/commentit.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
   })();
-    {%if page.comments %}
+</script>
+{%if page.comments %}
   {% assign sorted_comments = (page.comments | sort: 'date') %}
 {% endif %}
 {% for c in sorted_comments %}
@@ -134,5 +135,4 @@ category: blog
 {% else %}
   There are no comments on this post.
 {% endfor %}
-</script>
 
