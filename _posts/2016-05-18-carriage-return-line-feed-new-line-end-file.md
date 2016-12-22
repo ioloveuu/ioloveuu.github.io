@@ -19,6 +19,14 @@ comments:
       picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
     content: '1111'
     date: 2016-12-22T09:09:09.230Z
+  - author:
+      type: full
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
+    content: >-
+      &#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;
+    date: 2016-12-22T09:14:53.738Z
 
 ---
 
