@@ -99,4 +99,20 @@ category: blog
 
 所以，请遵守规范。
 
-[BeiYuu]:    http://beiyuu.com  "BeiYuu"
+<noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
+<div id="commentit"></div>
+<script type="text/javascript">
+  /** CONFIGURATION VARIABLES **/
+  var commentitUsername = 'ioloveuu';
+  var commentitRepo = 'ioloveuu/ioloveuu.github.io';
+  var commentitPath = '{{ page.path }}';
+
+  /** DON'T EDIT FOLLOWING LINES **/
+  (function() {
+      var commentit = document.createElement('script');
+      commentit.type = 'text/javascript';
+      commentit.async = true;
+      commentit.src = 'https://commentit.io/static/embed/dist/commentit.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
+  })();
+</script>
