@@ -1,8 +1,18 @@
----
-layout: post
+---layout: post
 title: 回车、换行、和文件末尾空行
-description: 回车和换行在不同系统下面定义不同，时不时会有一些小问题出来，git 经常出现的 No new line at the end of file 也让很多人费解，需要梳理一下
+description: >-
+  回车和换行在不同系统下面定义不同，时不时会有一些小问题出来，git 经常出现的 No new line at the end of file
+  也让很多人费解，需要梳理一下
 category: blog
+comments:
+  - author:
+      type: full
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
+    content: '1111111111'
+    date: 2016-12-22T09:02:25.106Z
+
 ---
 
 ## 回车和换行
