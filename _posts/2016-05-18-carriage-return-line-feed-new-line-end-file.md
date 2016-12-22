@@ -49,6 +49,13 @@ comments:
       picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
     content: '&#x6211;&#x8981;&#x5199;&#x7F51;&#x6587;'
     date: 2016-12-22T10:21:43.190Z
+  - author:
+      type: full
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
+    content: '&#x6211;&#x8981;&#x5199;'
+    date: 2016-12-22T10:21:58.235Z
 
 ---
 
