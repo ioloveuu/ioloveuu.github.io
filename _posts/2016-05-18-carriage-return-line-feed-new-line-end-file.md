@@ -1,4 +1,5 @@
----layout: post
+---
+layout: post
 title: 回车、换行、和文件末尾空行
 description: >-
   回车和换行在不同系统下面定义不同，时不时会有一些小问题出来，git 经常出现的 No new line at the end of file
@@ -155,6 +156,25 @@ comments:
 
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
+{%if page.comments %}
+  {% assign sorted_comments = (page.comments | sort: 'date') %}
+{% endif %}
+{% for c in sorted_comments %}
+  <div class="media">
+    <div class="media-">
+      <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
+    </div>
+    <div class="media-body">
+      <p class="text-muted">
+        <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
+        on {{ c.date | date_to_string }}
+      </p>
+      <p>{{ c.content | newline_to_br }}</p>
+    </div>
+  </div>
+{% else %}
+  There are no comments on this post.
+{% endfor %}
 <script type="text/javascript">
   /** CONFIGURATION VARIABLES **/
   var commentitUsername = 'ioloveuu';
@@ -170,23 +190,5 @@ comments:
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
   })();
 </script>
-{%if page.comments %}
-  {% assign sorted_comments = (page.comments | sort: 'date') %}
-{% endif %}
-{% for c in sorted_comments %}
-  <div class="media">
-    <div class="media-left">
-      <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
-    </div>
-    <div class="media-body">
-      <p class="text-muted">
-        <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
-        on {{ c.date | date_to_string }}
-      </p>
-      <p>{{ c.content | newline_to_br }}</p>
-    </div>
-  </div>
-{% else %}
-  There are no comments on this post.
-{% endfor %}
+
 
