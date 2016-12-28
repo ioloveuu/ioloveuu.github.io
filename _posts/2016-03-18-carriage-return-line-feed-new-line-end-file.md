@@ -1,63 +1,10 @@
 ---
+published: true
+author: Charles
 layout: post
-title: 回车、换行、和文件末尾空行
-description: >-
-  回车和换行在不同系统下面定义不同，时不时会有一些小问题出来，git 经常出现的 No new line at the end of file
-  也让很多人费解，需要梳理一下
-category: blog
-comments:
-  - author:
-      type: full
-      displayName: ioloveuu
-      url: 'https://github.com/ioloveuu'
-      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
-    content: '1111111111'
-    date: 2016-12-22T09:02:25.106Z
-  - author:
-      type: full
-      displayName: ioloveuu
-      url: 'https://github.com/ioloveuu'
-      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
-    content: '1111'
-    date: 2016-12-22T09:09:09.230Z
-  - author:
-      type: full
-      displayName: ioloveuu
-      url: 'https://github.com/ioloveuu'
-      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
-    content: >-
-      &#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;&#x94B1;
-    date: 2016-12-22T09:14:53.738Z
-  - author:
-      type: full
-      displayName: ioloveuu
-      url: 'https://github.com/ioloveuu'
-      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
-    content: >-
-      11111111333333333334444444444444444555555555555555556&#x6839;&#x6DF1;&#x8482;&#x56FA;&#x5C71;&#x8C46;&#x6839;
-    date: 2016-12-22T09:26:03.628Z
-  - author:
-      type: full
-      displayName: ioloveuu
-      url: 'https://github.com/ioloveuu'
-      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
-    content: 333333444555oppofffffffffffffddddhhHh
-    date: 2016-12-22T09:31:38.822Z
-  - author:
-      type: full
-      displayName: ioloveuu
-      url: 'https://github.com/ioloveuu'
-      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
-    content: '&#x6211;&#x8981;&#x5199;&#x7F51;&#x6587;'
-    date: 2016-12-22T10:21:43.190Z
-  - author:
-      type: full
-      displayName: ioloveuu
-      url: 'https://github.com/ioloveuu'
-      picture: 'https://avatars.githubusercontent.com/u/20235825?v=3&s=73'
-    content: '&#x6211;&#x8981;&#x5199;'
-    date: 2016-12-22T10:21:58.235Z
-
+title:  "EM算法：由浅入深"
+date:   2015-07-29 23:22
+categories: 机器学习
 ---
 
 ## 回车和换行
