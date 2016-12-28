@@ -40,8 +40,7 @@ category: blog
 身为一个开发人员，不管多热爱工作多好脾气，重复干活是会让人翻桌子的。
 所以，我要改改方式，封装一点函数，少写点代码少改点样式：
 
-```
-//一个按钮点击控制DIV的实现 .2
+```//一个按钮点击控制DIV的实现 .2
   var btn = document.createElement('input');
   var div = document.createElement('div');
   var onOff = true;
