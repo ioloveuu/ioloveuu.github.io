@@ -81,15 +81,16 @@ category: blog
   //等我写点代码
 ```
 
-<ul>
-	<li>首先添加域名记录，可参考DNSPod的帮助文档：<a href="https://www.dnspod.cn/Support">https://www.dnspod.cn/Support</a></li>
-	<li>在DNSPod自己的域名下添加一条<a href="http://baike.baidu.com/view/65575.htm">A记录</a>，地址就是Github Pages的服务IP地址：207.97.227.245</li>
-	<li>在域名注册商处修改DNS服务:去Godaddy修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。如果你不明白在哪里修改，可以参考这里：<a href="https://www.dnspod.cn/support/index/fid/119">Godaddy注册的域名如何使用DNSPod</a></li>
-	<li>等待域名解析生效</li>
-</ul>
-
-域名的配置部分完成，跪谢方校长。
-
+而目前github上火热的一塌糊涂的webpack采用了代码文件分离的模式，事件驱动模式下，框架帮我们完成各个事件类型，我们所要做的事件下完成相关的业务逻辑。
+```
+<html>
+<head>
+	<link href="style.css" rel="stylesheet">
+</head>
+	<script src="bundle.js"></script>
+</html>
+```
+它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。这样可以把逻辑分离，达到分层开发的目的。
 ## 配置和使用Github
 Git是版本管理的未来，他的优点我不再赘述，相关资料很多。推荐这本[Git中文教程][4]。
 
