@@ -2,7 +2,7 @@
 published: true
 author: Charles
 layout: post
-title:  "EM算法：由浅入深"
+title:  "EM算法：由浅入深sa"
 date:   2015-07-29 23:22
 categories: 机器学习
 ---
