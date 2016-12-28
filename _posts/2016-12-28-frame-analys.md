@@ -9,7 +9,8 @@ category: blog
 今天，参考网上一些文章，来对设计模式和MV*的框架的只是来温习一下。
 
 刚学前端代码时候，最开始往往直接方式的：
-```javascript
+
+```
   //一个按钮点击控制DIV的实现
   var btn = document.createElement('input');
   var div = document.createElement('div');
