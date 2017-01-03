@@ -94,32 +94,17 @@ category: blog
 
 ## MV*框架
 下面来回忆一下MV*的组成，
-## 配置和使用Github
-Git是版本管理的未来，他的优点我不再赘述，相关资料很多。推荐这本[Git中文教程][4]。
+
 
 要使用Git，需要安装它的客户端，推荐在Linux下使用Git，会比较方便。Windows版的下载地址在这里：[http://code.google.com/p/msysgit/downloads/list](http://code.google.com/p/msysgit/downloads/list "Windows版Git客户端")。其他系统的安装也可以参考官方的[安装教程][5]。
 
-下载安装客户端之后，各个系统的配置就类似了，我们使用windows作为例子，Linux和Mac与此类似。
 
 在Windows下，打开Git Bash，其他系统下面则打开终端（Terminal）：
 ![Git Bash](/images/githubpages/bootcamp_1_win_gitbash.jpg)
 
 
 
-    $ ls
-    config	id_rsa	id_rsa.pub	known_hosts
-    $ mkdir key_backup
-    $ cp id_rsa* key_backup
-    $ rm id_rsa*
-
-### 3、生成新的SSH Key：
-输入下面的代码，就可以生成新的key文件，我们只需要默认设置就好，所以当需要输入文件名的时候，回车就好。
-
-    $ ssh-keygen -t rsa -C "邮件地址@youremail.com"
-    Generating public/private rsa key pair.
-    Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):<回车就好>
-
-然后系统会要你输入加密串（[Passphrase][6]）：
+   
 
     Enter passphrase (empty for no passphrase):<输入加密串>
     Enter same passphrase again:<再次输入加密串>
