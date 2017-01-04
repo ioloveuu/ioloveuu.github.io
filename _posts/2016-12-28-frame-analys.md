@@ -165,7 +165,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 如果你改了GitHub的密码，需要重新设置token。
 
 ### 成功了
-好了，你已经可以成功连接GitHub了。
+好了，你已经可以成功
 
 ## 使用GitHub Pages建立博客
 与GitHub建立好链接之后，就可以方便的使用它提供的Pages服务，GitHub Pages分两种，一种是你的GitHub用户名建立的`username.github.io`这样的用户&组织页（站），另一种是依附项目的pages。
