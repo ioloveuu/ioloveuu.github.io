@@ -131,7 +131,7 @@ PS如果需要配置多个GitHub账号，可以参看这个[多个github帐号�
     $ ssh -T git@github.com
 
 
-如果是下面的反应：
+
 
     The authenticity of host 'github.com (207.97.227.239)' can't be established.
     RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
