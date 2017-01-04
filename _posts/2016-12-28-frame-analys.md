@@ -154,7 +154,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 有些工具没有通过SSH来链接GitHub。如果要使用这类工具，你需要找到然后设置你的API Token。
 
-在GitHub上，你可以点击*Account Setting > Account Admin*：
+在GitHub上，你可以点击*Account Setting > Account Admin*
 ![set ssh keys](/images/githubpages/bootcamp_1_token.jpg)
 
 然后在你的命令行中，输入下面的命令，把token添加进去：
