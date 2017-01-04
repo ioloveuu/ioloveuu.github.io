@@ -136,7 +136,7 @@ PS如果需要配置多个GitHub账号，可以参看这个[多个github帐号�
     Are you sure you want to continue connecting (yes/no)?
 
 
-不要紧张，输入`yes`就好，然后会看到：
+不要紧张，输入`yes`就：
 
     Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.
 
