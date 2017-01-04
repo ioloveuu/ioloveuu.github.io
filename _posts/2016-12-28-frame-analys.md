@@ -111,7 +111,7 @@ category: blog
 ![ssh key success](/images/githubpages/ssh-key-set.png)
 
 
-在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH链接的设置。
+在本机设置SSH Key之
 
 用文本编辑工具打开id_rsa.pub文件，如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。
 
