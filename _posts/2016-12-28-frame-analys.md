@@ -109,7 +109,7 @@ category: blog
     Enter passphrase (empty for no passphrase):<输入加密串>
     Enter same passphrase again:<再次输入加密串>
 
-最后看到这样的界面，就成功设置ssh key了：
+最后看到这样的界面，就成功设置ssh key
 ![ssh key success](/images/githubpages/ssh-key-set.png)
 
 ### 4、添加SSH Key到GitHub：
