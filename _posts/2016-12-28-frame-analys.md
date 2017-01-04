@@ -176,9 +176,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 而普通的项目是这样的，即使你也是用的`othername.github.io`：
 ![other pages](/images/githubpages/other-pages.png)
 
-创建好`username.github.io`项目之后，提交一个`index.html`文件，然后`push`到GitHub的`master`分支（也就是普通意义上的主干）。第一次页面生效需要一些时间，大概10分钟左右。
 
-生效之后，访问`username.github.io`就可以看到你上传的页面了，[beiyuu.github.io][7]就是一个例子。
 
 关于第二种项目`pages`，简单提一下，他和用户pages使用的后台程序是同一套，只不过它的目的是项目的帮助文档等跟项目绑定的内容，所以需要在项目的`gh-pages`分支上去提交相应的文件，GitHub会自动帮你生成项目pages。具体的使用帮助可以参考[Github Pages][]的官方文档：
 
