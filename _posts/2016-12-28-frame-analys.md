@@ -201,22 +201,10 @@ GitHub Pages为了提供对HTML内容的支持，选择了[Jekyll][]作为模板
 ### Jekyll基本结构
 Jeky
 
-    |-- _config.yml
-    |-- _includes
-    |-- _layouts
-    |   |-- default.html
-    |   `-- post.html
-    |-- _posts
-    |   |-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-    |   `-- 2009-04-26-barcamp-boston-4-roundup.textile
-    |-- _site
-    `-- index.html
+    
 
 
-简单介绍一下他们的作用：
-
-#### _config.yml
-
+简单介绍
 配置文件，用来定义你想要的效果，设置之后就不用关心了。
 
 #### _includes
