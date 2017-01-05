@@ -300,31 +300,13 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 
     $ sudo gem install jekyll
 
-我到了这一步的时候总是提示错误`Failed to build gem native extension`，很可能的一个原因是没有安装rvm，[rvm的安装][16]可以参考这里，或者敲入下面的命令：
-
-    $ curl -L https://get.rvm.io | bash -s stable --ruby
-
-然后还需要安装Markdown的解释器，这个需要在你的_config.yml里面设置`markdown:rdiscount`：
-
-    $ gem install jekyll rdiscount
-
+我到了这一步的时候总是提示错误`Failed to build gem native extension`，很可能的
 好了，如果一切顺利的话，本地环境就基本搭建完成了，进入之前我们建立的博客目录，运行下面的命令：
 
     $ jekyll serve --watch
 
 这个时候，你就可以通过`localhost:4000`来访问了。还有关于[jekyll bootstrap][17]的资料，需要自己修改调试的，可以研究一下。
 
-我在这个过程中还遇到两个诡异的没有解决的问题，一个是我放在根目录下面的blog.md等文件，在GitHub的pages服务上一切正常，可以通过`beiyuu.com/blog`访问的到，但是在本地环境下，总是`not found`，很是让人郁闷，看生成的`_site`目录下面的文件，也是正常的`blog.html`，但就是找不到，只有当我把URL改为`localhost:4000/blog.html`的时候，才能访问的到，环境不同真糟糕。
-
-还有一个是关于`category`的问题，根据`YAML`的语法，我们在文章头部可以定义文章所属的类别，也可以定义为`category:[blog,rss]`这样子的多类别，我在本地试一切正常，但是p
-
-
-[BeiYuu]:    http://beiyuu.com  "BeiYuu"
-[Github]:   http://github.com "Github"
-[jQuery]:   https://github.com/jquery/jquery "jQuery@github"
-[Twitter]:  https://github.com/twitter/bootstrap "Twitter@github"
-[Github Pages]: http://pages.github.com/ "Github Pages"
-[Godaddy]:  http://www.godaddy.com/ "Godaddy"
 [Jekyll]:   https://github.com/mojombo/jekyll "Jekyll"
 [DNSPod]:   https://www.dnspod.cn/ "DNSPod"
 [Disqus]: http://disqus.com/
