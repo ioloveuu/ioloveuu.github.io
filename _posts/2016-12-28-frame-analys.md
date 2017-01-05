@@ -228,11 +228,6 @@ Jekyll的配置写在_config.yml文件中，可配置项有很多，我们不去
 `Permalink`项用来定义你最终的文章链接是什么形式，他有下面几个变量：
 
 
-看看最终的配置效果：
-
-* `permalink: pretty` /2009/04/29/slap-chop/index.html
-* `permalink: /:month-:day-:year/:title.html` /04-29-2009/slap-chop.html
-* `permalink: /blog/:year/:month/:day/:title` /blog/2009/04/29/slap-chop/index.html
 
 我使用的是：
 
