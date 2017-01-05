@@ -317,15 +317,7 @@ Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加�
 [4]: http://progit.org/book/zh/ "Pro Git中文版"
 [5]: http://help.github.com/mac-set-up-git/ "Mac下Git安装"
 [6]: http://help.github.com/ssh-key-passphrases/
-[7]: http://beiyuu.github.io
-[8]: https://github.com/mojombo/jekyll/blob/master/README.textile
-[9]: https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
-[10]: https://github.com/mojombo/jekyll/wiki/configuration
-[11]: https://github.com/beiyuu/Github-Pages-Example
-[12]: http://docs.disqus.com/developers/universal/
-[13]: http://mihai.bazon.net/projects/javascript-syntax-highlighting-engine
-[14]: http://code.google.com/p/google-code-prettify/
-[15]: https://github.com/mojombo/jekyll/wiki/Install
+[7]: httpki/Install
 [16]: https://rvm.io/rvm/install/
 [17]: http://jekyllbootstrap.com/
 [18]: http://chxt6896.github.com/blog/2012/02/13/blog-jekyll-native.html
