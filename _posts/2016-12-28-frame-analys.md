@@ -111,10 +111,6 @@ category: blog
 ![ssh key success](/images/githubpages/ssh-key-set.png)
 
 
-在本机设置SSH Key之
-
-用文本编辑工具打开id_rsa.pub文件，如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。
-
 在GitHub的主页上点击设置按钮：
 ![github account setting](/images/githubpages/github-account-setting.png)
 
