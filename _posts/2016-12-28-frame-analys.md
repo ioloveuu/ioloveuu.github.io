@@ -206,38 +206,7 @@ Jeky
 
 Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加入`prettyprint`即可。所以我选择了Google Code Prettify。
 
-## 搭建本地jekyll环境
-这里主要介绍一下在Mac OS X下面的安装过程，其他操作系统可以参考官方的[jekyll安装][15]。
 
-作为生活在水深火热的墙内人民，有必要进行下面一步修改gem的源，方便我们更快的下载所需组建：
-
-    sudo gem sources --remove http://rubygems.org/
-    sudo 
-
-    $ sudo gem install jekyll
-
-我到了这一步的时候总是提示错误`Failed to build gem native extension`，很可能的
-好了，如果一切顺利的话，本地环境就基本搭建完成了，进入之前我们建立的博客目录，运行下面的命令：
-
-    $ jekyll serve --watch
-
-这个时候，你就可以通过`localhost:4000`来访问了。还有关于[jekyll bootstrap][17]的资料，需要自己修改调试的，可以研究一下。
-
-[Jekyll]:   https://github.com/mojombo/jekyll "Jekyll"
-[DNSPod]:   https://www.dnspod.cn/ "DNSPod"
-[Disqus]: http://disqus.com/
-[多说]: http://duoshuo.com/
-[1]:    {{ page.url}}  ({{ page.title }})
-[2]: http://markdown.tw/    "Markdown语法"
-[3]:    http://baike.baidu.com/view/65575.htm "A记录"
-[4]: http://progit.org/book/zh/ "Pro Git中文版"
-[5]: http://help.github.com/mac-set-up-git/ "Mac下Git安装"
-[6]: http://help.github.com/ssh-key-passphrases/
-[7]: httpki/Install
-[16]: https://rvm.io/rvm/install/
-[17]: http://jekyllbootstrap.com/
-[18]: http://chxt6896.github.com/blog/2012/02/13/blog-jekyll-native.html
-[a-record]: https://help.github.com/articles/my-custom-domain-isn-t-working
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
