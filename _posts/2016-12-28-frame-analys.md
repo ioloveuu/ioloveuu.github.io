@@ -125,44 +125,7 @@ category: blog
 
 
 
-    $ ssh -T git@github.com
-
-
-
-
-    The authenticity of host 'github.com (207.97.227.239)' can't be established.
-    RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-    Are you sure you want to continue connecting (yes/no)?
-
-
-
-
-    Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.
-
-
-
-
-
-    $ git config --global user.name "你的名字"
-    $ git config --global user.email "your_email@youremail.com"
-
-#### 设置GitHub的token
-
-2012-4-28补充：新版的接口已经不需要配置token了，所以下面这段可以跳过了
-
-有些工具没有通过SSH来链接GitHub。如果要使用这类工具，你需要找到然后设置你的API Token。
-
-在GitHub上，你可以点击*Account Setting > Account Admin*
-![set ssh keys](/images/githubpages/bootcamp_1_token.jpg)
-
-然后在你的命令行中，输入下面的命令，把token添加进去：
-
-    $ git config --global user.n
-如果你改了GitHub的密码，需要重新设置token。
-
-
-### User & Organization Pages
-想建立个人博客是用的第一种，形如`beiyuu.github.io`这样的可访问的站，每个用户名下面只能建立一个，创建之后点击`Admin`进入项目管理，可以看到是这样的：
+   
 ![user pages](/images/githubpages/user-pages.png)
 而普通的项目是这样的，即使你也是用的`othername.github.io`：
 ![other pages](/images/githubpages/other-pages.png)
