@@ -140,8 +140,7 @@ category: blog
 
     Hi <em>username</em>! You've successfully authenticated, but GitHub does not provide shell access.
 
-### 6、设置你的账号信息
-现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。
+
 
 Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。
 
