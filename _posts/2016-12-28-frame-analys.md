@@ -161,11 +161,6 @@ category: blog
     $ git config --global user.n
 如果你改了GitHub的密码，需要重新设置token。
 
-### 成功了
-好了，你已经可以成功
-
-## 使用GitHub Pages建立博客
-与GitHub建立好链接之后，就可以方便的使用它提供的Pages服务，GitHub Pages分两种，一种是你的GitHub用户名建立的`username.github.io`这样的用户&组织页（站），另一种是依附项目的pages。
 
 ### User & Organization Pages
 想建立个人博客是用的第一种，形如`beiyuu.github.io`这样的可访问的站，每个用户名下面只能建立一个，创建之后点击`Admin`进入项目管理，可以看到是这样的：
