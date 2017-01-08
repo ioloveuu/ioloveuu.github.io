@@ -142,7 +142,7 @@ category: blog
 
 
 
-Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。
+
 
     $ git config --global user.name "你的名字"
     $ git config --global user.email "your_email@youremail.com"
@@ -158,9 +158,7 @@ Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信�
 
 然后在你的命令行中，输入下面的命令，把token添加进去：
 
-    $ git config --global user.name "你的名字"
-    $ git config --global user.token 0123456789your123456789token
-
+    $ git config --global user.n
 如果你改了GitHub的密码，需要重新设置token。
 
 ### 成功了
