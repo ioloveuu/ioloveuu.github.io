@@ -123,8 +123,7 @@ category: blog
 
 
 
-### 5、测试一下
-可以输入下面的命令，看看设置是否成功，`git@github.com`的部分不要修改：
+
 
     $ ssh -T git@github.com
 
