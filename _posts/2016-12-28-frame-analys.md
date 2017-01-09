@@ -145,14 +145,6 @@ category: blog
 
 
 
-
-
-## 代码高亮插件
-如果写技术博客，代码高亮少不了，有两个可选插件[DlHightLight代码高亮组件][13]和[Google Code Prettify][14]。DLHightLight支持的语言相对较少一些，有js、css、xml和html，Google的高亮插件基本上任何语言都支持，也可以自定义语言，也支持自动识别，也有行号的特别支持。
-
-Google的高亮插件使用也比较方便，只需要在`<pre>`的标签上加入`prettyprint`即可。所以我选择了Google Code Prettify。
-
-
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
