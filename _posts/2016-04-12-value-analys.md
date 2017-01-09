@@ -12,11 +12,7 @@ category: blog
 
 
 
-[BeiYuu]:    http://beiyuu.com  "BeiYuu"
-[Github]:   http://github.com "Github"
-[jQuery]:   https://github.com/jquery/jquery "jQuery@github"
-[Twitter]:  https://github.com/twitter/bootstrap "Twitter@github"
-[Github Pages]: http://pages.github.com/ "Github Pages"
+
 
 
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
