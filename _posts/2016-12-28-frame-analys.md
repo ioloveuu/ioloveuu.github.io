@@ -96,8 +96,6 @@ category: blog
 下面来回忆一下MV*的组成，
 
 
-要使用Git，需要安装它的客户端，推荐在Linux下使用Git，会比较方便。Windows版的下载地址在这里：[http://code.google.com/p/msysgit/downloads/list](http://code.google.com/p/msysgit/downloads/list "Windows版Git客户端")。其他系统的安装也可以参考官方的[安装教程][5]。
-
 
 ，打开Git Bash，其他系统下面则打开终端（Terminal）：
 ![Git Bash](/images/githubpages/bootcamp_1_win_gitbash.jpg)
