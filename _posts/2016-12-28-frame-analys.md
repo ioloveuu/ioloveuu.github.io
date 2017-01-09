@@ -122,14 +122,7 @@ category: blog
    
 ![user pages](/images/githubpages/user-pages.png)
 而普通的项目是这样的，即使你也是用的`othername.github.io`：
-![other pages](/images/githubpages/other-pages.png)
 
-
-
-
-
-
-设置成功后，根据DNS的情况，最长可能需要一天才能生效，耐心等待吧。
 
 
 
