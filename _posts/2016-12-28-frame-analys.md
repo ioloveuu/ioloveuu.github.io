@@ -112,8 +112,7 @@ category: blog
 在GitHub的主页上点击设置按钮：
 ![github account setting](/images/githubpages/github-account-setting.png)
 
-选择SSH Keys项，把复制的内容粘贴进去，然后点击Add Key按钮即可：
-![set ssh keys](/images/githubpages/bootcamp_1_ssh.jpg)
+
 
 
 
