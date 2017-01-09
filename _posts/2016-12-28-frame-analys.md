@@ -124,10 +124,6 @@ category: blog
 而普通的项目是这样的，即使你也是用的`othername.github.io`：
 ![other pages](/images/githubpages/other-pages.png)
 
-
-
-关于第二种项目`pages`，简单提一下，他和用户pages使用的后台程序是同一套，只不过它的目的是项目的帮助文档等跟项目绑定的内容，所以需要在项目的`gh-pages`分支上去提交相应的文件，GitHub会自动帮你生成项目pages。具体的使用帮助可以参考[Github Pages][]的官方文档：
-
 ### 绑定域名
 我们在第一部分就提到了在DNS部分的设置，再来看在GitHub的配置，要想让`username.github.io`能通过你自己的域名来访问，需要在项目的根目录下新建一个名为`CNAME`的文件，文件内容形如：
 
