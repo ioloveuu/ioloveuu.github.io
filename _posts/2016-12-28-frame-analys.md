@@ -109,10 +109,13 @@ MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。不
 不对，发错图了，虽然我没用过，但也可以像小四一样成为借鉴派写手啊
 
 ![mvp](/images/mvp.png)
+
 从上图可以知道
+
 1. MVP子部件之间双向通信的。
 2. 但是View 与 Model 之间通过 Presenter 传递信息。
 3. View 非常薄，不部署任何业务逻辑，称为"被动视图"（Passive View），即没有任何主动性，而 Presenter非常厚，所有逻辑都部署在那里。
+
 ###那么什么又是MVVM呢
 
 ![mvvm](/images/mvvm.png)
