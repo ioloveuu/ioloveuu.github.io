@@ -96,33 +96,12 @@ category: blog
 下面来回忆一下MV*的组成，
 
 
-
-，打开Git Bash，其他系统下面则打开终端（Terminal）：
-![Git Bash](/images/githubpages/bootcamp_1_win_gitbash.jpg)
-
-
-
-   
-
-
-最后看到这样的界面，就成功设置ssh key
-![ssh key success](/images/githubpages/ssh-key-set.png)
-
-
 在GitHub的主页上点击设置按钮：
 ![github account setting](/images/githubpages/github-account-setting.png)
 
-
-
-
-
-
-
-   
+  
 ![user pages](/images/githubpages/user-pages.png)
 而普通的项目是这样的，即使你也是用的`othername.github.io`：
-
-
 
 
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
