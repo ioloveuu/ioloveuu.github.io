@@ -96,11 +96,12 @@ category: blog
 下面来回忆一下MV*的组成，我们在前端领域涉及到的框架一般是mvc和最新的mvvm，
 ##那么什么是MVC呢
 MVC是一种架构模式，它不局限于前端，而是一种设计思想，它通过数据与界面的分离，来使应用程序的结构分离，达到分层开发的目的。可以参看下图：
-![mvc](/images/mvc.jpg)
-具体的来说，就是将Model
 
-  
-![user pages](/images/githubpages/user-pages.png)
+![mvc](/images/mvc.jpg)
+具体的来说，就是将Model代表的数据与view代表的view隔离，用controller来管理逻辑和用户输入。这种模式早在20世纪80年代就已经出现了。
+
+##那么什么又是MVVM呢
+![mvvm](/images/mvvm.jpg)
 而普通的项目是这样的，即使你也是用的`othername.github.io`：
 
 
