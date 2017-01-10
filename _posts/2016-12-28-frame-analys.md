@@ -95,12 +95,9 @@ category: blog
 ## MV*框架
 下面来回忆一下MV*的组成，我们在前端领域涉及到的框架一般是mvc和最新的mvvm，
 ##那么什么是MVC呢
-
-
-
-
-在GitHub的主页上点击设置按钮：
-![github account setting](/images/githubpages/github-account-setting.png)
+MVC是一种架构模式，它不局限于前端，而是一种设计思想，它通过数据与界面的分离，来使应用程序的结构分离，达到分层开发的目的。可以参看下图：
+![mvc](/images/mvc.jpg)
+具体的来说，就是将Model
 
   
 ![user pages](/images/githubpages/user-pages.png)
