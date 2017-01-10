@@ -101,7 +101,7 @@ MVC是一种架构模式，它不局限于前端，而是一种设计思想，�
 具体的来说，就是将Model代表的数据与view代表的view隔离，用controller来管理逻辑和用户输入。这种模式早在20世纪80年代就已经出现了。
 
 ##那么什么又是MVVM呢
-![mvvm](/images/mvvm.jpg)
+![mvvm](/images/mvvm.png)
 而普通的项目是这样的，即使你也是用的`othername.github.io`：
 
 
