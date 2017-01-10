@@ -98,13 +98,11 @@ category: blog
 MVC是一种架构模式，它不局限于前端，而是一种设计思想，它通过数据与界面的分离，来使应用程序的结构分离，达到分层开发的目的。可以参看下图：
 
 ![mvc](/images/mvc.jpg)
-具体的来说，就是将Model代表的数据与view代表的view隔离，用controller来管理逻辑和用户输入。这种模式早在20世纪80年代就已经出现了。
-
+具体的来说，就是将Model代表的数据与view代表的view隔离，用controller来管理逻辑和用户输入。这种模式早在20世纪80年代就已经出现了，发展至今已经十分成熟了。但是也有一些问题存在，最明显的就是在逻辑复杂度和项目规模正比的时候混乱的数据流动方式让人发指啊！
 ##那么什么又是MVVM呢
+
 ![mvvm](/images/mvvm.png)
-而普通的项目是这样的，即使你也是用的`othername.github.io`：
-
-
+MVVM是05年才流行起来的，它源于MVC模式，但最大变化在于VM代替了C的模式，也就是数据绑定，从而让View的数据状态变化的时候直接影响VM。
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
