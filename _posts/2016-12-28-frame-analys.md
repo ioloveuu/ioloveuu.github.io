@@ -115,7 +115,17 @@ MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。不
 ###那么什么又是MVVM呢
 
 ![mvvm](/images/mvvm.png)
+
 MVVM是05年才流行起来的，它源于MVC模式，但最大变化在于VM代替了C的模式，也就是数据绑定，从而让View的数据状态变化的时候直接影响VM。
+```
+写点代码分析
+```
+巴啦啦巴啦啦巴啦啦
+
+#总结
+MV*模式的核心都可以说在于数据驱动，基于M推送消息更新，V/P来订阅这个模式。开发者通过数据来维护项目的更新，而数据的更新自动渲染UI端的更新，当然在前端里，和传统的MVC模式有点区别，这点区别的原因在js不同于其他面向对象语言的一些特性。所以view,controller，model的合并都存在合并的可能，产生了不一样的火花，完毕。
+
+
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
