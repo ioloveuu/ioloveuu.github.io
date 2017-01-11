@@ -90,6 +90,7 @@ category: blog
 	<script src="bundle.js"></script>
 </html>
 ```
+
 它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。这样可以把逻辑分离，达到分层开发的目的。
 
 ## MV*框架
@@ -121,9 +122,11 @@ MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。不
 ![mvvm](/images/mvvm.png)
 
 MVVM是05年才流行起来的，它源于MVC模式，但最大变化在于VM代替了C的模式，也就是数据绑定，从而让View的数据状态变化的时候直接影响VM。
+
 ```
 写点代码分析
 ```
+
 巴啦啦巴啦啦巴啦啦
 
 #总结
