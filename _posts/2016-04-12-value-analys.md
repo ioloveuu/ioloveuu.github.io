@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 分析一下前端的MV*框架
-description: 框架模式可以提升前端开发者的开发效率和对前端框架的使用理解，它包含了多种设计模式
+title: 分析一下前端的变量赋值
+description: js是一种令人着迷的语言，它存在种种机制让我在实践中学习成长。
 category: blog
 ---
 
