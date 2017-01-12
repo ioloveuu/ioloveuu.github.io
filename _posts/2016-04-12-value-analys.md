@@ -8,7 +8,7 @@ category: blog
 已在作用域中声明但还没有赋值的变量，是 undefined 的。相反，还没有在作用域中声明
 过的变量，是 undeclared 的
 
-
+地对地导弹点点滴滴
 
 
 
