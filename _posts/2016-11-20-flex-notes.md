@@ -27,8 +27,7 @@ flex-layout解决了css布局的不少问题:
 如果一个[容器]里包含的[栅格]超过24格，多出的部分将另起一行。
 IE的话只兼容IE10+，其他主流浏览器都支持。
 Flexbox有主轴，副轴的概念，flex-layout已经封装好了，你不需要懂得flexbox，也无需针对不同轴使用不同的class。不过，如果你对Flexbox有所了解的话，用起来会更顺手。
-与Bootstrap等栅格化不同的是：flex-layout不需要container，栅格本身不自带padding。flex布局
-
+与Bootstrap等栅格化不同的是：flex-layout不需要container，栅格本身不自带padding。flex布局。具体
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
