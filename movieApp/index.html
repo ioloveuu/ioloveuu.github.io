@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<meta name="viewport" content="width=640,user-scalable=no" />
+<link href="css/index.css" rel="stylesheet" />
+<script src="js/index.js"></script>     
+</head>
+<body>
+<script>
+document.body.style.height=view().h+"px";
+</script>
+<section class="page pageShow" id="welcome">
+    <div class="tree">
+        <img src="img/tree.jpg" />
+        <div class="welcome2">
+            <img src="img/title.png" />
+            <span class="shake"></span>
+        </div>
+        <img src="img/title2.png" class="tree3" />
+        <span class="cloud"></span>
+        <span class="cloud"></span>
+        <span class="cloud"></span>
+    </div>
+    <h1 id="logo">
+        <img src="img/logo.png" />
+    </h1>
+</section>
+<script>
+fnLoad();
+</script>
+<section class="page" id="over">
+    <div class="tree">
+        <img src="img/tree.jpg" />
+        <div class="welcome2">
+            <img src="img/tranks2.png" />
+        </div>
+        <span class="cloud"></span>
+        <span class="cloud"></span>
+        <span class="cloud"></span>
+    </div>
+    <input type="button" value="重新评价" class="btn submit" />
+</section>
+<section class="page" id="form">
+    <section class="tags" id="formTag">
+        <h2>给视频添加标签</h2>
+        <label>
+            <input type="radio" name="tags2" value="剧情犀利" />
+            <span>剧情犀利</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="场面大作" />
+            <span>巨资场面大作</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="爆米花电影" />
+            <span>爆米花电影</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="青春" />
+            <span>青春</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="DV神作" />
+            <span>DV神作</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="河北奥斯卡" />
+            <span>河北奥斯卡</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="新李安归来" />
+            <span>新李安归来</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="诺兰新作" />
+            <span>又一诺兰新作</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="科幻巨作" />
+            <span>科幻巨作</span>
+        </label>
+        <label>
+            <input type="radio" name="tags2" value="武侠大片" />
+            <span>武侠大片</span>
+        </label>
+    </section>
+    <textarea class="formText" placeholder="（选填：吐槽点什么呢~~）" rows="5"></textarea>
+    <input type="tel" class="formText" placeholder="（选填：吐槽点什么呢~~）"/>
+    <input type="button" value="上传" class="btn" />
+</section>
+<section class="page" id="news">
+    <img src="img/news.png" />
+    <h2>电影模仿秀</h2>
+    <section class="file">
+        <label>
+            <input type="file" />
+            <span>导入视频</span>
+        </label>
+        <label>
+            <input type="file" />
+            <span>上传照片</span>
+        </label>
+    </section>
+    <p class="info"></p>
+</section>
+<section class="page" id="mask"></section>
+<section class="page pageShow" id="index">
+    <section class="scrollWrap">
+        <section id="tabPic">
+            <ul id="picList">
+                <li><img src="img/1.jpg" /></li>
+                <li><img src="img/2.jpg" /></li>
+                <li><img src="img/3.jpg" /></li>
+                <li><img src="img/4.jpg" /></li>
+                <li><img src="img/5.jpg" /></li>
+            </ul>
+            <section class="picMask">
+                <p>最新电影上映</p>
+                <nav>
+                    <a href="javascript:;" class="active"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                    <a href="javascript:;"></a>
+                </nav>
+            </section>
+        </section> 
+        <!--<a href="javascript:;" class="newsBtn">
+            <em>最新电影上映</em>
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>-->
+        <a href="javascript:;" class="newsBtn">最新上映</a>
+        <section id="score">
+            <h2>电影评分</h2>
+            <ul class="scoreList">
+                <li>
+                    <span>总评分</span>
+                    <nav>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </nav>
+                    <input type="hidden" value="0" />
+                </li>
+                <li>
+                    <span>剧情</span>
+                    <nav>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </nav>
+                    <input type="hidden" value="0" />
+                </li>
+                <li>
+                    <span>场面</span>
+                    <nav>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                    </nav>
+                    <input type="hidden" value="0" />
+                </li>
+            </ul>
+        </section>
+        <section class="tags" id="indexTag">
+            <h2>电影标签</h2>
+            <label>
+                <input type="radio" name="tags" value="剧情好" />
+                <span>剧情好</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="风景赞" />
+                <span>风景赞</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="场面大" />
+                <span>场面大</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="主角好看" />
+                <span>主角好看</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="丑死了" />
+                <span>丑死了</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="画面感人" />
+                <span>画面感人</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="导演不行" />
+                <span>导演不行</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="贺岁剧" />
+                <span>贺岁剧</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="骗钱" />
+                <span>骗钱</span>
+            </label>
+            <label>
+                <input type="radio" name="tags" value="烂片" />
+                <span>烂片</span>
+            </label>
+        </section>
+        <p class="info"></p>
+        <input type="button" value="提交" class="btn submit" />
+    </section>
+</section>
+</body>
+</html>
