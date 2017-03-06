@@ -4,8 +4,7 @@ title: 入职总结(1)
 description: 这是我的入职的工作总结。
 category: blog
 ---
-如果能跑出来，就可以做一些小项目了，比如写一个知乎日报啊偷笑，这些demo在github上很多。
-可以结合一些组件库写demo，这样可以更加了解组件化。比如饿了么团队的Element、mint-ui
+
  
  
 ## Vuex
