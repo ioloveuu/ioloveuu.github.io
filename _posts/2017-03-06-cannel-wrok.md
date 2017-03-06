@@ -4,22 +4,11 @@ title: 入职总结(1)
 description: 这是我的入职的工作总结。
 category: blog
 ---
+# 入职工作总结
 
- 
- 
-## Vuex
-Vuex 是一个专门为 Vue.js 应用设计的 状态管理模型 + 库。它为应用内的所有组件提供集中式存储服务，其中的规则确保状态只能按预期方式变更。说白了就是控制应用的一些全局状态。状态改变了，对应的视图也
-什么是vuex？会改变。
- 
-在学习Vuex时，会有一些ES6特性，当遇到这些时，最好不要一带而过，去好好看一看这些es6特性。
-比如在学习Action时可以看看ES6新增的Promise和参数解构。
-实践的方法一样是先看别人别人写的代码，比如官方的购物车实例的应用结构
-把之前写的demo优化一下，有些地方可以用用vuex
-## vue cli安装方法
+## 第一天
 
-$ vue -cli
-
-## vue-router
+今天刚入职新公司
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
