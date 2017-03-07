@@ -14,8 +14,7 @@ category: blog
 等到快中午才开通，然后就要安装`工作环境`了。
 恩，可能会接手一个`移动端项目`，具体等待老大详细交接。
 
-## 移动端项目
-
+## 移动端项目：做一个APP
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
