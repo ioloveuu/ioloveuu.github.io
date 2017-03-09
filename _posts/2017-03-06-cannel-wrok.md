@@ -15,7 +15,7 @@ category: blog
 恩，可能会接手一个`移动端项目`，具体等待老大详细交接。
 
 ## 移动端项目：做一个APP
-先进行页面布局
+先进行页面布局.布局遇到不少坑啊
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
