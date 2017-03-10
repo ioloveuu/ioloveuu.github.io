@@ -15,7 +15,7 @@ category: blog
 恩，可能会接手一个`移动端项目`，具体等待老大详细交接。
 
 ## 移动端项目：做一个APP
-先进行页面布局.布局遇到不少坑啊
+先进行页面布局.布局遇到不少坑啊。今天才感觉自己自己和规范的CSS代码规范有差距，希望自己可以早日达到自己的老大升哥的水平吧。
 <noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
 <div id="commentit"></div>
 <script type="text/javascript">
