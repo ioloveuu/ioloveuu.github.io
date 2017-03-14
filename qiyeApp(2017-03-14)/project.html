@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>文档标题</title>
+    <meta name="description" content="页面描述" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript" src="js/head.js"></script>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<body class="bg">
+<div class="project-title">2016.8.1-2016.12.26</div>
+<div class="qiye-data-box mt30" id="main2">这是数据表占位</div>
+</body>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript" src="./js/charts.js"></script>
+<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('main2'));
+var option = {
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        right: 'right',
+        bottom: 'bottom',
+        data: ['78创业商机网','35378小资本创业','23商业','K18餐饮','89197商机','23商机']
+    },
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius : '55%',
+            label:{
+                normal:{
+                    show:false ,
+                    position : 'outside'
+                },
+                emphasis:{
+                    show :false
+                }
+            },
+            center: ['50%', '40%'],
+            data:[
+                {value:59, name:'78创业商机网'},
+                {value:56, name:'35378小资本创业'},
+                {value:65, name:'23商业'},
+                {value:65, name:'K18餐饮'},
+                {value:26, name:'89197商机'},
+                {value:26, name:'23商机'}
+            ]
+        }
+    ]
+};
+myChart.setOption(option);
+
+</script>
+</html>
