@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>文档标题</title>
+    <meta name="description" content="页面描述" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript" src="js/head.js"></script>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="tit-c">
+        <ul class="qiye-select">
+            <li class="select-item">时间</li>
+        </ul>
+    </div>
+    <!-- 遮罩层 stars -->
+    <div class="box">
+    <!-- time -->
+        <div class="time-box hide">
+            <ul class="project-control">
+                <li>时间<span class="right-font fr">可选40天内1-7天的数据</span></li>
+                <li>
+                    <input type="text" name="date" placeholder="开始时间" class="data-ins">
+                    <span class="ins-font">至</span>
+                    <input type="text" name="date" placeholder="结束时间" class="data-ins">
+                </li>
+                <li>对比时间</li>
+                <li>
+                    <input type="text" name="date" placeholder="开始时间" class="data-ins">
+                    <span class="ins-font">至</span>
+                    <input type="text" name="date" placeholder="结束时间" class="data-ins">
+                </li>
+                <div class="cancel fl">取消</div><div class="sure fl">确定</div>
+            </ul>
+        </div>
+    </div>
+<!--     <div class="date-remind-info hide">日期选择范围为1-7天</div>   
+    <div class="date-warn-info hide">项目选择数量为1-10个</div> -->
+    <div id="bg"></div>
+<section>
+      <div>
+          <table class="qiye-tabs-style qiye-top-tabs-style">
+            <thead>
+              <tr>
+                <th><span>项目</span></th>
+                <th><span>流量PV</span></th>
+                <th><span>留言量</span></th>
+                <th><span>有效咨询量</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="qiye-top-radius qiye-top-red">1</span>初客牛排</td>
+                <td>135</td>
+                <td>135</td>
+                <td>135</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius qiye-top-yellow">2</span>初客牛排</td>
+                <td>33</td>
+                <td>33</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius qiye-top-blue">3</span>初客牛排</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius">4</span>初客牛排</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius">5</span>初客牛排</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius">6</span>初客牛排</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius">7</span>初客牛排</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius">8</span>初客牛排</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius">9</span>初客牛排</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td><span class="qiye-top-radius">10</span>初客牛排</td>
+                <td>22</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+            </tbody>
+          </table>    
+    </div>
+</section>
+</body>
+</html>

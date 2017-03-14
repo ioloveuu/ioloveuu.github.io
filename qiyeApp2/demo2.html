@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>文档标题</title>
+    <meta name="description" content="页面描述" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript" src="js/head.js"></script>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="qiye-warper">
+    <!-- 今日数据 stars -->
+    <section class="module-bg qiye-mod1">
+        <div class="qiye-title">
+            <h2>今日数据<span>02/08</span></h2>
+            <span class="t-more">更多</span>
+        </div>
+        <ul class="cfx mod1-list">
+            <li><span><img src="img/liuliang.png" alt="流量">流量</span><b>125</b></li>
+            <li><span><img src="img/turn.png" alt="转化量">转化量</span><b>635</b></li>
+            <li><span><img src="img/leaveWord.png" alt="留言量">留言量</span><b>441</b></li>
+            <li><span><img src="img/ask.png" alt="有效咨询量">有效咨询量</span><b>468</b></li>
+            <li><span><img src="img/twoside.png" alt="双向接通">双向接通</span><b>441</b></li>
+            <li><span><img src="img/noanswer.png" alt="项目方未接">项目方未接</span><b>468</b></li>
+        </ul>
+    </section>
+    <!-- 今日数据 ends -->      
+    <!-- 项目趋势分析 satrs -->
+    <section class="module-bg qiye-mod2 mt20">
+        <div class="qiye-title">
+            <h2>项目趋势分析</h2>
+        </div>
+    <div class="tit-c">
+        <ul class="qiye-select">
+            <li class="select-item">初客牛排</li>
+            <li class="select-item">时间</li>
+        </ul>
+    </div>
+    <!-- 遮罩层 stars -->
+    <div class="box">
+        <div class="box1 hide">
+            <ul class="fl left-li">
+                <li class="box-tit">所有平台</li>
+                <li class="box-tit">78商机网</li>
+                <li class="box-tit">23商机网</li>
+                <li class="box-tit">1234658商机网</li>
+            </ul>
+            <div id="content">
+                <ul class="fl right-li">
+                    <li>汉堡快餐客源满11<i class=""></i></li>
+                    <li>汉堡快餐客源满1<i class=""></i></li>
+                    <li>汉堡快餐客源满1<i class=""></i></li>
+                    <li>汉堡快餐客源满1<i class=""></i></li>
+                    <li>汉堡快餐客源满1<i class=""></i></li>
+                </ul>
+                <ul class="fl right-li hide">
+                    <li>汉堡快餐客源满2<i class=""></i></li>
+                    <li>汉堡快餐客源满2<i class=""></i></li>
+                    <li>汉堡快餐客源满2<i class=""></i></li>
+                    <li>汉堡快餐客源满2<i class=""></i></li>
+                    <li>汉堡快餐客源满2<i class=""></i></li>
+                </ul>
+                <ul class="fl right-li hide">
+                    <li>汉堡快餐客源满3<i class=""></i></li>
+                    <li>汉堡快餐客源满3<i class=""></i></li>
+                    <li>汉堡快餐客源满3<i class=""></i></li>
+                    <li>汉堡快餐客源满3<i class=""></i></li>
+                    <li>汉堡快餐客源满3<i class=""></i></li>
+                </ul>
+                <ul class="fl right-li hide">
+                    <li>汉堡快餐客源满4<i class=""></i></li>
+                    <li>汉堡快餐客源满4<i class=""></i></li>
+                    <li>汉堡快餐客源满4<i class=""></i></li>
+                    <li>汉堡快餐客源满4<i class=""></i></li>
+                    <li>汉堡快餐客源满4<i class=""></i></li>
+                </ul>
+            </div>
+            <div class="index-info-tit"><span class="index-info-cancel">取消</span><span class="index-info-sm">可选择1-10个项目</span><span class="index-info-sure">确定</span></span></div>
+            <div class="project-warn-info hide">项目选择数量为1-10个</div>
+        </div>
+    <!-- time -->
+        <div class="time-box hide">
+            <ul class="project-control">
+                <li>时间<span class="right-font fr">可选40天内1-7天的数据</span></li>
+                <li>
+                    <input type="text" name="date" placeholder="开始时间" class="data-ins">
+                    <span class="ins-font">至</span>
+                    <input type="text" name="date" placeholder="结束时间" class="data-ins">
+                </li>
+                <li>对比时间</li>
+                <li>
+                    <input type="text" name="date" placeholder="开始时间" class="data-ins">
+                    <span class="ins-font">至</span>
+                    <input type="text" name="date" placeholder="结束时间" class="data-ins">
+                </li>
+                <div class="cancel fl">取消</div><div class="sure fl">确定</div>
+            </ul>
+        </div>
+    </div>
+    <div id="bg"></div>
+    <!-- 遮罩层 ends -->
+        <div class="qiye-data-box mt30" id="main">这是数据表占位</div>
+        <table class="qiye-fenxi-tabs mt20">
+            <thead>
+                <tr>
+                    <th class="tabs-fore1">项目</th>
+                    <th class="tabs-fore2">平台</th>
+                    <th class="tabs-fore3">数据</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="yuan-iocn red-bor">初客牛排</td>
+                    <td>78创业商机</td>
+                    <td class="tabs-fore3">5129</td>
+                </tr>
+                <tr>
+                    <td class="yuan-iocn black-bor">了派泡芙</td>
+                    <td>23商机</td>
+                    <td class="tabs-fore3">5346</td>
+                </tr>
+                <tr>
+                    <td class="yuan-iocn sliver-bor">初客牛排</td>
+                    <td>78创业商机</td>
+                    <td class="tabs-fore3">5129</td>
+                </tr>
+                <tr>
+                    <td class="yuan-iocn demon-bor">了派泡芙</td>
+                    <td>23商机</td>
+                    <td class="tabs-fore3">5346</td>
+                </tr>
+                <tr>
+                    <td class="yuan-iocn cyan-bor">初客牛排</td>
+                    <td>78创业商机</td>
+                    <td class="tabs-fore3">5129</td>
+                </tr>
+                <tr>
+                    <td class="yuan-iocn blue-bor">平均转化</td>
+                    <td>其他</td>
+                    <td class="tabs-fore3">5544</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- 项目趋势分析 ends -->
+    <section class="qiye-mod3 mt20">
+        <ul class="qiye-fenxi-list">
+            <li>
+                <img src="img/qiye-icon1.png" alt="">
+                <span>转化率TOP</span>
+                <i class="i-icon"></i>
+            </li>
+            <li>
+                <img src="img/qiye-icon2.png" alt="">
+                <span>对比分析</span>
+                <i class="i-icon"></i>
+            </li>
+            <li>
+                <img src="img/qiye-icon3.png" alt="">
+                <span>客服KPI报表</span>
+                <i class="i-icon"></i>
+            </li>
+            <li>
+                <img src="img/qiye-icon4.png" alt="">
+                <span>项目投放概况</span>
+                <i class="i-icon"></i>
+            </li>
+        </ul>
+    </section>
+</div>
+<script type="text/javascript" src="./js/index.js"></script>
+<script type="text/javascript">
+// 折线表格函数
+var myChart = echarts.init(document.getElementById('main'));
+var option= {
+    color: ['#24c6c9', '#ffaa62', '#b39be2','#00b419','#5f52a0'],
+    tooltip: {
+        trigger: 'axis'
+    },
+    grid: {
+        left: '0',
+        right: '3',
+        bottom: '3',
+        top:'13',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'category',
+        nameLocation: 'middle',
+        boundaryGap: false,
+        splitLine:{//网格线
+            show: false,
+            lineStyle:{
+                color:['#b1b1b1'],
+                type:'dashed'
+            }
+        },
+        data: ['2.4','2.5','2.6','2.7','2.7']
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: '{value} %'
+        }
+    },
+    series: [
+        {
+            name:'78商机',
+            type:'line',
+            smooth: true,
+            data:['4','14','4','14','4'],
+            label: {
+                normal: {
+                    show: true,
+                    position: 'middle'//值显示
+                }
+            }
+        },
+        {
+            name:'23商机',
+            type:'line',
+            smooth: true,
+            lineStyle: {
+                normal:{
+                    type: 'dashed'
+                }
+            },
+            data:['8','9','8','7','8'],
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            }
+        },
+        {
+            name:'89135创业小商机',
+            type:'line',
+            smooth: true,
+            data:['8','7','13','8','13'],
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top'
+                }
+            }
+        }
+    ]
+};
+myChart.setOption(option);
+
+</script>
+</body>
+</html>
