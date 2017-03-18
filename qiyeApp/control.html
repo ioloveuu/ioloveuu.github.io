@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>文档标题</title>
+    <meta name="description" content="页面描述" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript" src="js/head.js"></script>
+    <link rel="stylesheet" href="css/mobiscroll.android-ics-2.5.2.css"> 
+    <link rel="stylesheet" href="css/mobiscroll.core-2.5.2.css"> 
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+    <style>
+    html,body{background:#fff;}
+    </style>
+</head>
+<!-- 下部弹出型 -->
+<body>
+    <div class="tit-c">
+        <ul class="control-data">
+            <li class="select-item">所有平台</li>
+            <li class="select-item">留言数据</li>
+            <li class="select-item">全部数据</li>
+            <li>
+                <input type="text" name="date" placeholder="2017/2/8" class="data-ins" id="txtStartDate"><span class="ins-font">至</span><input type="text" name="date" placeholder="2017/2/8" class="data-ins" id="txtEndDate">
+            </li>
+        </ul>
+    </div>
+    <!-- turn -->
+    <div class="control-tit-box">
+        <ul class="turn-tit hide">
+            <li data-type="jump"><span class="control-line">流量1</span><i class="control-yes"></i></li>
+            <li class="" data-type="jump"><span class="control-line">转化量1</span><i class="control-yes"></i></li>
+        </ul>
+        <ul class="turn-tit hide">
+            <li data-type="jump"><span class="control-line">流量2</span><i class="control-yes"></i></li>
+            <li class="" data-type="jump"><span class="control-line">转化量2</span><i class="control-yes"></i></li>
+        </ul>
+        <ul class="turn-tit hide">
+            <li data-type="jump"><span class="control-line">流量3</span><i class="control-yes"></i></li>
+            <li class="" data-type="jump"><span class="control-line">转化量3</span><i class="control-yes"></i></li>
+        </ul>
+    </div>
+    <!-- 跳转 -->
+    <div class="export-data">导出数据</div>
+    <div id="bg"></div>
+<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="js/echarts.common.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
+<script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script>
+<script type="text/javascript">
+// 确认请求 单选提交
+// $("#project-btn").dateSearch({
+//     starDate : $("#txtStartDate"),
+//     endDate : $("#txtEndDate"),
+//     ajaxUrl : "data2.json"
+// });
+$(".right-li li").dateSearch({
+    projectName: $(),
+    ajaxUrl : "data2.json"
+});
+$(".turn-tit li").dateSearch({
+    projectName: $(),
+    ajaxUrl : "data2.json"
+});
+
+//初始化日期控件
+$("#txtStartDate").mobiscroll().date();
+$("#txtEndDate").mobiscroll().date();
+var opt = {
+    preset: 'date', //日期
+    lang: 'zh',
+    theme: 'android-ics', //皮肤样式
+    display: 'modal', //显示方式
+    mode: 'scroller', //日期选择模式
+    dateFormat: 'yy-mm-dd', // 日期格式
+    setText: '确定', //确认按钮名称
+    cancelText: '取消', //取消按钮名籍我
+    dateOrder: 'yymmdd', //面板中日期排列格式
+    dayText: '日',
+    monthText: '月',
+    yearText: '年', //面板中年月日文字
+    hourText: '时',
+    minuteText: '分',
+    secText: '秒',
+    timeFormat: 'HH:ii',
+    timeWheels: 'HHii',
+    rows: 3,
+    height: 60,
+    width: 160
+};
+$("#txtStartDate").mobiscroll(opt);
+$("#txtEndDate").mobiscroll(opt);
+</script>
+</body>
+</html>
