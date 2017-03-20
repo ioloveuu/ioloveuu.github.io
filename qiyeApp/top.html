@@ -35,7 +35,7 @@
                   <span class="ins-font">至</span>
                   <input type="text" name="date" placeholder="结束时间" class="data-ins" id="txtEndDate">
               </div>
-              <div class="cancel fl">取消</div><div class="sure fl">确定</div>
+              <div class="cancel fl">取消</div><div class="sure fl" id="date-btn">确定</div>
             </ul>
         </div>
     </div>
@@ -125,6 +125,18 @@
 <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
 <script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script> 
 <script type="text/javascript">
+// tab
+$(".qiye-select li").tabJs({
+    projectName: $(),
+    onClass: "active",
+    selectBoolean: false,
+    ajaxUrl : "data2.json"
+});
+$(".project-control li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+});
 // 确认请求
 $("#date-btn").dateSearch({
     starDate : $("#txtStartDate"),

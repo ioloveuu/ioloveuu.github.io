@@ -39,9 +39,6 @@ $.dataFunction = function(options){
             for(k in data){
                 tdStr = '';
                 tdStr='<td>'+data[k].td1+'</td><td>'+data[k].td3+'</td><td>'+data[k].td4+'</td><td>'+data[k].td5+'</td><td>'+data[k].td6+'</td>';
-                for(j in data[k]){
-                    // tdStr='<td>'+data[k].td1+'</td><td>'+data[k].td3+'</td><td>'+data[k].td4+'</td><td>'+data[k].td5+'</td><td>'+data[k].td6+'</td>';
-                }
                 trStr += '<tr>'+tdStr+'</tr>';
             }
             break;
@@ -79,21 +76,22 @@ $.fn.dateSearch = function(options){
         var _this = $(this);
         $(".project-warn-info").hide();
         _this.on("click",function(){
-            console.log('ajax')
+            // console.log('ajax')
             var dataType = $(this).attr("data-type");
-            if( opts.starDate !='' && opts.endDate != '' ){
-                var starTime = parseInt( opts.starDate.val().split('-').join('') );
-                var endTime = parseInt( opts.endDate.val().split('-').join('') );
-                if( starTime > endTime ){
-                    $(".project-warn-info").show();
-                    return;
-                }
-            }
+            // if( opts.starDate !='' && opts.endDate != '' ){
+            //     var starTime = parseInt( opts.starDate.val().split('-').join('') );
+            //     var endTime = parseInt( opts.endDate.val().split('-').join('') );
+            //     if( starTime > endTime ){
+            //         $(".project-warn-info").show();
+            //         return;
+            //     }
+            // }
             $(".box1").hide();
             $(".project-control").hide();
             $("#bg").hide();
             $(".turn-tit-box").hide();
             $(".control-tit-box .turn-tit").hide();
+            $(".qiye-select").find(".select-item").removeClass("active");
             switch(dataType){
                 //  首页
                 case "index-table" :
@@ -150,13 +148,43 @@ $.fn.tabJs = function(options){
         onClass:"",
         onStyle : "clickObj"  //clickObj(对象本身确定) dbclickObj(用button确定)
     }, options );
-    return this.each(function(i){
-        //console.log(this); //全部li的父级
-        //console.log(_this);//当前li
+    return $(this).each(function(i){
         var _this = $(this);
+        var $this = _this.parents();
         _this.on("click",function(){
-            // console.log(opts.onClass)
-            _this.toggleClass(opts.onClass).siblings().removeClass(opts.onClass);  //类的添删
+            // 加判断在三级区域不点击就保持着最后一次状态
+            if(opts.selectBoolean){
+                console.log(_this.parent().parent())
+                _this.parent().parent().find('.'+opts.onClass).removeClass(opts.onClass);
+            }
+            _this.toggleClass(opts.onClass);
+            // 转化量 || 控制数据  || 项目
+            if($this.hasClass("project-control") || $this.hasClass("turn-tit") || $this.parent().hasClass("control-tit-box") || $this.parent().hasClass("mChoice")){
+                _this.parent().parent().find('i').removeClass('yes-btn');//对号单选
+                _this.find('i').toggleClass('yes-btn');
+            }else if($this.parent().hasClass("contentBox")){
+                _this.find('i').toggleClass('turn-btn'); //多选
+            }
+            $("#bg").css({
+                "display": "block", "height": $(document).height()
+            });
+            if(_this.parents(".tit-c").next().children()!=$('.index-info-tit span')){
+                var indexH = _this.parents(".tit-c").next().children().eq(_this.index()).height();
+                if(indexH>1244){
+                    $(".index-info-tit").css("position","fixed");
+                }else{
+                    $(".index-info-tit").css("position","absolute");
+                }
+                //只有一个选项切换
+                if(!opts.selectBoolean){
+                    _this.parent().next().toggle();
+                }
+                $(".box").scrollTop(1000)
+                $this.next().children().hide();
+                $this.next().children().eq(_this.index()).show();//tit
+                $this.next().children().eq(_this.index()).children().show();
+                $('.index-info-tit span').css('display','inline-block');
+            }
         })
     })
 };

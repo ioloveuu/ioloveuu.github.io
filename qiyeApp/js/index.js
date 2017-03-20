@@ -2,12 +2,14 @@
 $(".cancel,.index-info-cancel").click(function(){
     $(".project-control,.box1").hide();
     $("#bg").hide();
+    $(".qiye-select").find(".select-item").removeClass("active");
 });
 $("#bg").click(function(){
   $(this).hide();
   $(".box1").hide();
   $(".turn-tit-box").hide();
   $(".time-box").hide();
+  $(".qiye-select").find(".select-item").removeClass("active");
 });
 // view more
 $(".info-more").click(function(){
@@ -33,64 +35,52 @@ $('.gaodan-info-tabs .arrow-btn').on('click', function(ev){
         var n=0;
         $this.children('ul').children('li').mouseover(function(){
         var _this=$(this);
-        $this.find('.'+settings).removeClass(settings);
-        _this.addClass(settings);
-        console.log($this)
-        if($this.hasClass("turn-tit-box")){
-          $this.find('i').removeClass('yes-btn');//圆圈单选
-          _this.find('i').toggleClass('yes-btn');
-        }else if($this.hasClass("control-tit-box") || $this.hasClass("mChoice")){
-          $this.find('i').removeClass('yes-btn');//对号单选
-          _this.find('i').toggleClass('yes-btn');
-        }else if($this.hasClass("contentBox")){
-          _this.find('i').toggleClass('turn-btn'); //多选
-        }else if($this.hasClass("mChoice")){
-          $this.find('i').removeClass('yes-btn');//对号单选
-          _this.find('i').toggleClass('yes-btn');
-          $(".project-control").css("margin","0 auto");
-        }
-        $("#bg").css({
-            "display": "block", "height": $(document).height()
-        });
-        if($this.next().children()!=$('.index-info-tit span')){
-            // $('body').css("overflow","hidden")
-            // document.documentElement.scrollTop = document.body.scrollTop =0;
-            // console.log($this.next().children().eq(_this.index()).height(),$(window).height())
-            var indexH = $this.next().children().eq(_this.index()).height();
-            if(indexH>750){
-                $(".index-info-tit").css("position","fixed");
-            }else{
-                $(".index-info-tit").css("position","absolute");
-            }
-            $this.next().children().hide();
-            $('.index-info-tit span').css('display','inline-block')
-            $this.next().children().eq(_this.index()).show();//tit
-            $this.next().children().eq(_this.index()).children().show();
-        }
-        //BUG
-        // if($(".time-box").css("display") == "block"){
-        //   $(".qiye-select").css("zIndex",998);
-        //   console.log(1)
-        // }else if($(".time-box").css("display") == "none"){
-        //   $(".qiye-select").css("zIndex",2);
+        // 来回切换
+        // $this.find('.'+settings).removeClass(settings);
+        // _this.addClass(settings);
+        // console.log($this,_this)
+        // if($this.hasClass("turn-tit-box")){
+        //   $this.find('i').removeClass('yes-btn');//圆圈单选
+        //   _this.find('i').toggleClass('yes-btn');
+        // }else if($this.hasClass("control-tit-box") || $this.hasClass("mChoice")){
+        //   $this.find('i').removeClass('yes-btn');//对号单选
+        //   _this.find('i').toggleClass('yes-btn');
+        // }else if($this.hasClass("contentBox")){
+        //   _this.find('i').toggleClass('turn-btn'); //多选
         // }
-       
-        //3级选项卡子页面切换
-        $this.children('#content').children().hide();
-        $this.children('#content').children().eq(_this.index()).toggle();
-        var arr = [];
-        // 控制最大10个
-        if(_this.find('i').hasClass('yes-btn')){
-          n++;
+        // $("#bg").css({
+        //     "display": "block", "height": $(document).height()
+        // });
+        if($this.next().children()!=$('.index-info-tit span')){
+            // var indexH = $this.next().children().eq(_this.index()).height();
+            // if(indexH>1240){
+            //     $(".index-info-tit").css("position","fixed");
+            // }else{
+            //     $(".index-info-tit").css("position","absolute");
+            // }
+            // $this.next().children().hide();
+            // $('.index-info-tit span').css('display','inline-block')
+            console.log($this,$this.next().children())
+            $this.next().children().eq(_this.index()).show();  //tit
+            // $this.next().children().eq(_this.index()).children().show();
         }
-        if(n>4){
-          $(".project-warn-info").toggle();
-        }else{
-          $(".project-warn-info").hide();
-        }
-        for(var i=0;i<n;i++){
-            arr.push(_this.text());
-        }
+        // //3级选项卡子页面切换
+        // $this.children('#content').children().hide();
+        // $this.children('#content').children().eq(_this.index()).toggle();
+
+        // var arr = [];
+        // // 控制最大10个
+        // if(_this.find('i').hasClass('yes-btn')){
+        //   n++;
+        // }
+        // if(n>4){
+        //   $(".project-warn-info").toggle();
+        // }else{
+        //   $(".project-warn-info").hide();
+        // }
+        // for(var i=0;i<n;i++){
+        //     arr.push(_this.text());
+        // }
     });
   }
 })(jQuery)

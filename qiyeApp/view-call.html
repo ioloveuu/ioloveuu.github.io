@@ -24,7 +24,7 @@
             <li class="select-item">所有数据</li>
             <li class="select-item">近7天</li>
         </ul>
-    </div>
+    
     <!-- 遮罩层start -->
     <div class="box">
         <div class="box1 hide">
@@ -94,6 +94,7 @@
             </ul>
         </div>
     </div>
+    </div>
     <div id="bg"></div>
     <!-- 遮罩层end -->
     <section class="module-bg view-info-box">
@@ -115,6 +116,29 @@
 <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
 <script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script> 
 <script type="text/javascript">
+// tab
+// 头标题
+$(".qiye-select li").tabJs({
+    projectName: $(),
+    onClass: "active",
+    ajaxUrl : "data2.json"
+});
+// 右侧内容
+$(".right-li li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+});
+$(".turn-tit li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+});
+$(".left-li li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+})
 // 确认请求
 $("#date-btn").dateSearch({
     starDate : $("#txtStartDate"),

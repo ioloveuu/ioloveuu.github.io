@@ -22,7 +22,7 @@
         <li class="select-item">78商机创业网</li>
         <li class="select-item">今天</li>
     </ul>
-</div>
+
 <!-- 遮罩层 stars -->
 <div class="box">
     <div class="box1 hide">
@@ -78,6 +78,7 @@
         </ul>
     </div>
 </div>
+</div>
 <div id="bg"></div>
 <!-- 遮罩层 ends -->
 <section class="qiye-tabs-box">
@@ -127,6 +128,27 @@
 <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
 <script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script> 
 <script type="text/javascript">
+// tab
+$(".qiye-select li").tabJs({
+    projectName: $(),
+    onClass: "active",
+    ajaxUrl : "data2.json"
+});
+$(".right-li li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+});
+// $(".turn-tit li").tabJs({
+//     projectName: $(),
+//     onClass: "select",
+//     ajaxUrl : "data2.json"
+// });
+$(".left-li li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+})
 // 确认请求
 $("#project-btn").dateSearch({
     starDate : $("#txtStartDate"),

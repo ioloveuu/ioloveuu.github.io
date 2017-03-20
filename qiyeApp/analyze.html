@@ -16,13 +16,13 @@
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
 <body>
-   <div class="tit-c">
+    <div class="tit-c">
         <ul class="qiye-select qiye-select-local">
             <li class="select-item">初客牛排</li>
             <li class="select-item">转化量对比</li>
             <li class="select-item">时间</li>
         </ul>
-    </div>
+    <!-- </div> -->
 <!-- 遮罩层 stars -->
     <div class="box">
         <div class="box1 hide">
@@ -33,30 +33,30 @@
                 <li class="box-tit">1234658商机网</li>
             </ul>
             <div id="content" class="mChoice">
-                <ul class="fl right-li">
+                <ul class="fl right-li ">
                     <li data-type="jump">汉堡快餐客源满11<i class=""></i></li>
-                    <li class="select"  data-type="jump">汉堡快餐客源满1<i class=""></i></li>
+                    <li class=""  data-type="jump">汉堡快餐客源满1<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
                 </ul>
                 <ul class="fl right-li hide">
                     <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
-                    <li class="select" data-type="jump">汉堡快餐客源满2<i class=""></i></li>
+                    <li class="" data-type="jump">汉堡快餐客源满2<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
                 </ul>
                 <ul class="fl right-li hide">
                     <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
-                    <li class="select" data-type="jump">汉堡快餐客源满3<i class=""></i></li>
+                    <li class="" data-type="jump">汉堡快餐客源满3<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
                 </ul>
                 <ul class="fl right-li hide">
                     <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
-                    <li class="select" data-type="jump">汉堡快餐客源满4<i class=""></i></li>
+                    <li class="" data-type="jump">汉堡快餐客源满4<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
@@ -92,6 +92,7 @@
             </ul>
         </div>
     </div>
+</div>
 <div id="bg"></div>
 <section class="module-bg">
     <div class="qiye-data-box mt30" id="main">这是数据表占位</div>
@@ -100,9 +101,32 @@
 <script type="text/javascript" src="js/echarts.common.min.js"></script>
 <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
 <script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<!-- <script type="text/javascript" src="js/index.js"></script> -->
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript">
+// tab
+// 头标题
+$(".qiye-select li").tabJs({
+    projectName: $(),
+    onClass: "active",
+    ajaxUrl : "data2.json"
+});
+// 右侧内容
+$(".right-li li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+});
+$(".turn-tit li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+});
+$(".left-li li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+})
 // 确认请求 单选提交
 $("#project-btn").dateSearch({
     starDate : $("#txtStartDate"),
@@ -121,12 +145,7 @@ $(".turn-tit li").dateSearch({
     projectName: $(),
     ajaxUrl : "data2.json"
 });
-// tab
-$(".qiye-select li").tabJs({
-    projectName: $(),
-    onClass: "active",
-    ajaxUrl : "data2.json"
-});
+
 // 初始化数据
 // $.dataFunction({
 //     ajaxUrl : "data2.json",

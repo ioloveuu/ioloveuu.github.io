@@ -21,57 +21,20 @@
     <ul class="qiye-select qiye-select-local">
         <li class="select-item">近7天</li>
     </ul>
-</div>
-<!-- 遮罩层 stars -->
-<div class="box">
-<!--     <div class="box1 hide">
-        <ul class="fl left-li">
-            <li class="box-tit">所有平台</li>
-            <li class="box-tit">78商机网</li>
-            <li class="box-tit">23商机网</li>
-            <li class="box-tit">1234658商机网</li>
-        </ul>
-        <div id="content" class="mChoice">
-            <ul class="fl right-li">
-                <li data-type="jump">汉堡快餐客源满11<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
-            </ul>
-            <ul class="fl right-li hide">
-                <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满2<i class=""></i></li>
-            </ul>
-            <ul class="fl right-li hide">
-                <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满3<i class=""></i></li>
-            </ul>
-            <ul class="fl right-li hide">
-                <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
-                <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
+
+    <!-- 遮罩层 stars -->
+    <!-- <div class="box"> -->
+    <!-- time -->
+        <div class="turn-tit-box hide">
+            <ul class="project-control">
+                <li>时间</li>
+                <li>
+                    <input type="text" name="date" placeholder="开始时间" class="date-view" id="txtStartDate">
+                </li>
+                <div class="cancel fl">取消</div><div id="date-btn" class="sure fl">确定</div>
             </ul>
         </div>
-    </div> -->
-<!-- time -->
-    <div class="turn-tit-box hide">
-        <ul class="project-control">
-            <li>时间</li>
-            <li>
-                <input type="text" name="date" placeholder="开始时间" class="date-view" id="txtStartDate">
-            </li>
-            <div class="cancel fl">取消</div><div id="date-btn" class="sure fl">确定</div>
-        </ul>
-    </div>
+    <!-- </div> -->
 </div>
 <div id="bg"></div>
 <section class="module-bg">
@@ -85,6 +48,18 @@
 <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
 <script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script> 
 <script type="text/javascript">
+// tab
+$(".qiye-select li").tabJs({
+    projectName: $(),
+    onClass: "active",
+    selectBoolean: false,
+    ajaxUrl : "data2.json"
+});
+$(".project-control li").tabJs({
+    projectName: $(),
+    onClass: "select",
+    ajaxUrl : "data2.json"
+});
 // 确认请求
 $(".right-li li").dateSearch({
     projectName: $(),
