@@ -20,20 +20,22 @@
 <div class="tit-c">
     <ul class="qiye-select qiye-select-local">
         <li class="select-item">78商机创业网</li>
-        <li class="select-item">今天</li>
+        <li class="select-item time-tit">今天</li>
     </ul>
+</div>
     <!-- 遮罩层 stars -->
     <div class="box">
         <div class="box1 hide">
             <ul class="fl left-li">
-                <li class="box-tit">所有平台</li>
+                <!-- <li class="box-tit">所有平台</li>
                 <li class="box-tit">78商机网</li>
                 <li class="box-tit">23商机网</li>
-                <li class="box-tit">1234658商机网</li>
+                <li class="box-tit">1234658商机网</li> -->
             </ul>
-            <div id="content" class="mChoice">
-                <ul class="fl right-li">
-                    <li data-type="jump">汉堡快餐客源满11<i class=""></i></li>
+            <div id="content" class="contentBox">
+                <!-- 初始化-动态插入模板 mod-2-->
+               <!--  <ul class="fl right-li">
+                    <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满1<i class=""></i></li>
@@ -59,46 +61,52 @@
                     <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
                     <li data-type="jump">汉堡快餐客源满4<i class=""></i></li>
-                </ul>
+                </ul> -->
+            </div>
+            <div class="index-info-tit">
+                <span class="index-info-cancel fl">取消</span><span class="index-info-sm fl">不支持不同平台间选择项目</span><span class="index-info-sure fl" id="project-btn" data-type="index-table">确定</span></span>
             </div>
         </div>
         <div class="turn-tit-box hide">
             <ul class="project-control">
-              <li><span class="view-font">今天</span><i class=""></i></li>
-              <li><span class="view-font">近7天</span><i class=""></i></li>
-              <div class="project-control-info">自定义<span class="right-font fr">可选40天内1-7天的数据</span></div>
+              <li class="txtNowDate"><span class="view-font">今天</span><i class=""></i></li>
+              <li class="txtSevenDate"><span class="view-font">近7天</span><i class=""></i></li>
+              <div class="project-control-info"><span class="view-font">自定义</span><span class="right-font fr">可选40天内1-7天的数据</span></div>
               <div class="project-control-info">
                   <input type="text" name="date" placeholder="开始时间" class="data-ins" id="txtStartDate">
                   <span class="ins-font">至</span>
                   <input type="text" name="date" placeholder="结束时间" class="data-ins" id="txtEndDate">
               </div>
-              <div class="cancel fl">取消</div><div class="sure fl">确定</div>
+              <div class="cancel fl">取消</div><div id="date-btn" class="sure fl" data-type="index-table">确定</div>
             </ul>
         </div>
     </div>
-</div>
+
 <div id="bg"></div>
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>    
 <script type="text/javascript" src="js/echarts.common.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
-<script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script> 
+<script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script>
+<script type="text/javascript">
+// $.tabFunction({
+//     ajaxUrl : "data2.json",
+//     caseType : "other-tab"
+// });
+$.tabFunction({
+    ajaxUrl : "https://guest.qudao.com/app/getcustom?",
+    caseType : "index-table",
+    tabsStyleBoolean: false,
+    tabsLeftBoolean: true
+});
+</script>
+
 <script type="text/javascript">
 // tab
 $(".qiye-select li").tabJs({
     projectName: $(),
     onClass: "active",
-    ajaxUrl : "data2.json"
-});
-$(".right-li li").tabJs({
-    projectName: $(),
-    onClass: "select",
-    ajaxUrl : "data2.json"
-});
-$(".left-li li").tabJs({
-    projectName: $(),
-    onClass: "select",
     ajaxUrl : "data2.json"
 });
 $(".project-control li").tabJs({
@@ -109,17 +117,31 @@ $(".project-control li").tabJs({
 // 确认请求
 $("#project-btn").dateSearch({
     starDate : $("#txtStartDate"),
-    endDate : $("#txtEndDate"),
     ajaxUrl : "data2.json"
 });
 $("#date-btn").dateSearch({
     projectName: $(),
     ajaxUrl : "data2.json"
 });
-$(".right-li li").dateSearch({
+$(".right-li").dateSearch({
     projectName: $(),
     ajaxUrl : "data2.json"
 });
+//单击请求
+// $(document).delegate('.ajax-c','click',function(){
+//     $(document).dateSearch({
+//         ajaxUrl : "data2.json",
+//         caseType : "index-table"
+//     })
+// })  //迟一次
+
+// $(document).dateSearch({
+//     ajaxUrl : "data2.json",
+//     caseType : "index-table"
+// }).delegate('.ajax-c','click',function(){
+//     // console.log(1)
+// })
+
 // 初始化数据
 // $.dataFunction({
 //     ajaxUrl : "data2.json",

@@ -3,6 +3,7 @@ $(".cancel,.index-info-cancel").click(function(){
     $(".project-control,.box1").hide();
     $("#bg").hide();
     $(".qiye-select").find(".select-item").removeClass("active");
+    $("html,body").css({"height":'100%',"overflow":""});
 });
 $("#bg").click(function(){
   $(this).hide();
@@ -10,12 +11,13 @@ $("#bg").click(function(){
   $(".turn-tit-box").hide();
   $(".time-box").hide();
   $(".qiye-select").find(".select-item").removeClass("active");
+  $("html,body").css({"height":'100%',"overflow":""});
 });
 // view more
-$(".info-more").click(function(){
-    $(this).parent().hide();
-    $(this).parent().prev('.info-dl').removeClass('info-dl-height');
-})
+// $(".info-more").click(function(){
+//     $(this).parent().hide();
+//     $(this).parent().prev('.info-dl').removeClass('info-dl-height');
+// })
 // 表格开关
 $('.gaodan-info-tabs .arrow-btn').on('click', function(ev){
   var  $this = $(this);
@@ -60,14 +62,14 @@ $('.gaodan-info-tabs .arrow-btn').on('click', function(ev){
             // }
             // $this.next().children().hide();
             // $('.index-info-tit span').css('display','inline-block')
-            console.log($this,$this.next().children())
+            // console.log($this,$this.next().children().eq(_this.index()))
             $this.next().children().eq(_this.index()).show();  //tit
             // $this.next().children().eq(_this.index()).children().show();
         }
+        $("html,body").css({"height":'100%',"overflow":"hidden"});
         // //3级选项卡子页面切换
         // $this.children('#content').children().hide();
         // $this.children('#content').children().eq(_this.index()).toggle();
-
         // var arr = [];
         // // 控制最大10个
         // if(_this.find('i').hasClass('yes-btn')){
@@ -85,11 +87,11 @@ $('.gaodan-info-tabs .arrow-btn').on('click', function(ev){
   }
 })(jQuery)
 $(function(){
-    $('.box1').tabs('select');
-    $('#content').tabs('select');
-    $('.turn-tit-box').tabs('select');
-    $('.tit-c').tabs('active');
-    $('.control-data-box').tabs('active');
-    $('.control-tit-box').tabs('select');
+    // $('.box1').tabs('select');
+    // $('#content').tabs('select');
+    // // $('.turn-tit-box').tabs('select');
+    // $('.tit-c').tabs('active');
+    // $('.control-data-box').tabs('active');
+    // $('.control-tit-box').tabs('select');
 });
 

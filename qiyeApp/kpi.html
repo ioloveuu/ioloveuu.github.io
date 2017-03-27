@@ -21,7 +21,6 @@
     <ul class="qiye-select qiye-select-local">
         <li class="select-item">近7天</li>
     </ul>
-
     <!-- 遮罩层 stars -->
     <!-- <div class="box"> -->
     <!-- time -->
@@ -47,6 +46,14 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
 <script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script> 
+<script type="text/javascript">
+// 初始化数据
+$.viewInfo({
+    ajaxUrl : "https://guest.qudao.com/app/list_gb?",
+    caseType : "time"
+});
+
+</script>
 <script type="text/javascript">
 // tab
 $(".qiye-select li").tabJs({
@@ -74,11 +81,7 @@ $("#date-btn").dateSearch({
     projectName: $(),
     ajaxUrl : "data2.json"
 });
-// 初始化数据
-$.dataFunction({
-    ajaxUrl : "data2.json",
-    caseType : "kpi-table"
-});
+
 //初始化日期控件
 $("#txtStartDate").mobiscroll().date();
 $("#txtEndDate").mobiscroll().date();
@@ -111,111 +114,111 @@ $("#txtEndDate").mobiscroll(opt);
 $("#txtStartDate2").mobiscroll(opt);
 $("#txtEndDate2").mobiscroll(opt);
 // 折线表格函数
-var myChart = echarts.init(document.getElementById('main'));
-var data=[17, 20, 45, 56, 60, 64];
-var xMax=100;
-option = {
-    tooltip:{
-        show:true,
-        formatter:"{b} {c}"
-    },
-    grid:{
-        left:'27%',
-        top:'5%',
-        bottom:'0',
-        right:'0'
-    },
-    xAxis : [
-        {
-            max:xMax,
-            type : 'value',
-            axisTick: {
-            show: false,
-            },
-            axisLine: {
-                show:false,
-            },
-            axisLabel: {
-                show:false
-            },
-            splitLine: {
-                show: false
-            }
-        }
-    ],
-    yAxis : [
-        {
-            type : 'category',
-            data : ['出克牛排5','出克牛排4','出克牛排3','出克牛排2','出克牛排1','出克牛排0'],
-            offset: 60,
-            axisLabel : {
-                formatter: '{value}',
-                textStyle: {
-                    color: '#000',
-                    fontSize: 26
-                }
-            },
-            axisTick: {
-                show: false,
-            },
-            axisLine: {
-                show: false,
-            }
-        }
-    ],
-    series : [
-        {
-            name:' ',
-            type:'bar',
-            barWidth:16,
-            label: {
-                normal: {
-                    show: true,
-                    position: 'right',
-                    offset: [5,-5],
-                    textStyle: {
-                        color: '#d3d3d3',
-                        fontSize: 26
-                    }
-                }
-            },
-            data:[
-                {
-                    value:17,
-                    itemStyle:{
-                        normal:{color:'#b7ce9e'}
-                    }
-               },{
-                    value:20,
-                    itemStyle:{
-                        normal:{color:'#acd680'}
-                    }
-                },{
-                    value:45,
-                    itemStyle:{
-                        normal:{color:'#88e186'}
-                    }
-                },{
-                    value:56,
-                    itemStyle:{
-                        normal:{color:'#81e7cf'}
-                    }
-                },{
-                    value:60,
-                    itemStyle:{
-                        normal:{color:'#82dae6'}
-                    }
-                },{
-                    value:64,
-                    itemStyle:{
-                        normal:{color:'#80cbc4'}
-                    }
-                }
-            ]
-        }
-    ]
-};
-myChart.setOption(option); 
+// var myChart = echarts.init(document.getElementById('main'));
+// var data=[17, 20, 45, 56, 60, 64];
+// var xMax=100;
+// option = {
+//     tooltip:{
+//         show:true,
+//         formatter:"{b} {c}"
+//     },
+//     grid:{
+//         left:'27%',
+//         top:'5%',
+//         bottom:'0',
+//         right:'0'
+//     },
+//     xAxis : [
+//         {
+//             max:xMax,
+//             type : 'value',
+//             axisTick: {
+//             show: false,
+//             },
+//             axisLine: {
+//                 show:false,
+//             },
+//             axisLabel: {
+//                 show:false
+//             },
+//             splitLine: {
+//                 show: false
+//             }
+//         }
+//     ],
+//     yAxis : [
+//         {
+//             type : 'category',
+//             data : ['出克牛排5','出克牛排4','出克牛排3','出克牛排2','出克牛排1','出克牛排0'],
+//             offset: 60,
+//             axisLabel : {
+//                 formatter: '{value}',
+//                 textStyle: {
+//                     color: '#000',
+//                     fontSize: 26
+//                 }
+//             },
+//             axisTick: {
+//                 show: false,
+//             },
+//             axisLine: {
+//                 show: false,
+//             }
+//         }
+//     ],
+//     series : [
+//         {
+//             name:' ',
+//             type:'bar',
+//             barWidth:16,
+//             label: {
+//                 normal: {
+//                     show: true,
+//                     position: 'right',
+//                     offset: [5,-5],
+//                     textStyle: {
+//                         color: '#d3d3d3',
+//                         fontSize: 26
+//                     }
+//                 }
+//             },
+//             data:[
+//                 {
+//                     value:17,
+//                     itemStyle:{
+//                         normal:{color:'#b7ce9e'}
+//                     }
+//                },{
+//                     value:20,
+//                     itemStyle:{
+//                         normal:{color:'#acd680'}
+//                     }
+//                 },{
+//                     value:45,
+//                     itemStyle:{
+//                         normal:{color:'#88e186'}
+//                     }
+//                 },{
+//                     value:56,
+//                     itemStyle:{
+//                         normal:{color:'#81e7cf'}
+//                     }
+//                 },{
+//                     value:60,
+//                     itemStyle:{
+//                         normal:{color:'#82dae6'}
+//                     }
+//                 },{
+//                     value:64,
+//                     itemStyle:{
+//                         normal:{color:'#80cbc4'}
+//                     }
+//                 }
+//             ]
+//         }
+//     ]
+// };
+// myChart.setOption(option); 
 </script> 
 </body>
 </html>

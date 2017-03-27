@@ -11,13 +11,12 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <meta content="telephone=no" name="format-detection" />
     <script type="text/javascript" src="js/head.js"></script>
-    <script type="text/javascript" src="js/iscroll.js"></script>
     <link rel="stylesheet" href="css/mobiscroll.android-ics-2.5.2.css"> 
     <link rel="stylesheet" href="css/mobiscroll.core-2.5.2.css"> 
     <link type="text/css" rel="stylesheet" href="css/reset.css" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <style type="text/css">
-     body,html {margin:0;padding:0;height:100%;margin:0 auto;}
+     body,html {margin:0;padding:0;height:100‰;margin:0 auto;}
     </style>
 </head>
 <body>
@@ -25,17 +24,18 @@
     <!-- 今日数据 stars -->
     <section class="module-bg qiye-mod1">
         <div class="qiye-title">
-            <h2>今日数据<span>02/08</span></h2>
+            <h2>今日数据<span class="today">02/08</span></h2>
             <span class="t-more targetLinks" _href="more-prject-table">更多</span>
         </div>
-        <ul class="cfx mod1-list">
+        <!-- 初始化-动态插入模板 mod-1-->
+        <!-- <ul class="cfx mod1-list">
             <li><span><img src="img/liuliang.png" alt="流量">流量</span><b>125</b></li>
             <li><span><img src="img/turn.png" alt="转化量">转化量</span><b>635</b></li>
             <li><span><img src="img/leaveWord.png" alt="留言量">留言量</span><b>441</b></li>
             <li><span><img src="img/ask.png" alt="有效咨询量">有效咨询量</span><b>468</b></li>
             <li><span><img src="img/twoside.png" alt="双向接通">双向接通</span><b>441</b></li>
             <li><span><img src="img/noanswer.png" alt="项目方未接">项目方未接</span><b>468</b></li>
-        </ul>
+        </ul> -->
     </section>
     <!-- 今日数据 ends -->      
     <!-- 项目趋势分析 satrs -->
@@ -45,87 +45,37 @@
         </div>
     <div class="tit-c">
         <ul class="qiye-select">
-            <li class="select-item">初客牛排</li>
-            <li class="select-item">时间</li>
+            <li class="select-item project-tit">初客牛排</li>
+            <li class="select-item time-tit">时间</li>
         </ul>
     </div>
         <!-- 遮罩层 stars -->
         <div class="box" id="index-box">
             <div class="box1 hide">
                 <ul class="fl left-li">
-                    <li class="box-tit">所有平台</li>
-                    <li class="box-tit">78商机网</li>
-                    <li class="box-tit">23商机网</li>
-                    <li class="box-tit">1234658商机网</li>
+                    <!-- <li class="box-tit">所有平台</li> -->
+                    <!-- <li class="box-tit">78商机网</li>
+                    <li class="box-tit">23商机网</li> -->
                 </ul>
                 <div id="content" class="contentBox">
-                    <ul class="fl right-li">
-                        <li><span class="turn-cont" >汉堡快餐客源满11</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满12</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满13</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满14</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满15</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满11</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满12</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满14</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满15</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满11</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满12</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满13</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满14</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满15</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满11</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满12</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满13</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满14</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满15</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满11</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满12</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满13</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满14</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满15</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满11</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满12</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满13</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满14</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满15</span><i class=""></i></li> 
-                    </ul>
-                    <ul class="fl right-li hide">
-                        <li><span class="turn-cont" >汉堡快餐客源满21</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满22</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满23</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满24</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满25</span><i class=""></i></li>
-                    </ul>
-                    <ul class="fl right-li hide">
-                        <li><span class="turn-cont" >汉堡快餐客源满31</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满32</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满33</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满34</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满35</span><i class=""></i></li>
-                    </ul>
-                    <ul class="fl right-li hide">
-                        <li><span class="turn-cont" >汉堡快餐客源满41</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满42</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满43</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满44</span><i class=""></i></li>
-                        <li><span class="turn-cont" >汉堡快餐客源满45</span><i class=""></i></li>
-                    </ul>
+                    <!-- 初始化-动态插入模板 mod-2-->
                 </div>
-                <div class="index-info-tit"><span class="index-info-cancel fl">取消</span><span class="index-info-sm fl">可选择1-10个项目</span><span class="index-info-sure fl" id="project-btn">确定</span></span></div>
+                <div class="index-info-tit">
+                    <span class="index-info-cancel fl">取消</span><span class="index-info-sm fl">可选择1-10个项目</span><span class="index-info-sure fl" id="project-btn" data-type="index-table">确定</span></span>
+                </div>
                 <!-- <div class="project-warn-info hide fl">项目选择数量为1-10个</div> -->
             </div>
             <div class="turn-tit-box hide">
                 <ul class="project-control">
-                  <li><span class="view-font">今天</span><i class=""></i></li>
-                  <li><span class="view-font">近7天</span><i class=""></i></li>
-                  <div class="project-control-info">自定义<span class="right-font fr">可选40天内1-7天的数据</span></div>
+                  <li class="txtNowDate"><span class="view-font">今天</span><i class=""></i></li>
+                  <li class="txtSevenDate"><span class="view-font">近7天</span><i class=""></i></li>
+                  <div class="project-control-info"><span class="view-font">自定义</span><span class="right-font fr">可选40天内1-7天的数据</span></div>
                   <div class="project-control-info">
                       <input type="text" name="date" placeholder="开始时间" class="data-ins" id="txtStartDate">
                       <span class="ins-font">至</span>
                       <input type="text" name="date" placeholder="结束时间" class="data-ins" id="txtEndDate">
                   </div>
-                  <div class="cancel fl">取消</div><div id="date-btn" class="sure fl">确定</div>
+                  <div class="cancel fl">取消</div><div id="date-btn" class="sure fl" data-type="index-table">确定</div>
                 </ul>
             </div>
         </div>
@@ -138,40 +88,47 @@
                 <tr>
                     <th class="tabs-fore1">项目</th>
                     <th class="tabs-fore2">平台</th>
+                    <th class="tabs-fore3">转化率</th>
                     <th class="tabs-fore3">数据</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+<!--                 <tr>
                     <td class="yuan-iocn color-bor1">初客牛排1</td>
                     <td>78创业商机</td>
+                    <td class="tabs-fore3">20‰</td>
                     <td class="tabs-fore3">5129</td>
                 </tr>
                 <tr>
                     <td class="yuan-iocn color-bor2">了派泡芙</td>
                     <td>23商机</td>
-                    <td class="tabs-fore3">5346</td>
+                    <td class="tabs-fore3">20‰</td>
+                    <td class="tabs-fore3">5129</td>
                 </tr>
                 <tr>
                     <td class="yuan-iocn color-bor3">初客牛排</td>
                     <td>78创业商机</td>
+                    <td class="tabs-fore3">20‰</td>
                     <td class="tabs-fore3">5129</td>
                 </tr>
                 <tr>
                     <td class="yuan-iocn color-bor4">了派泡芙</td>
                     <td>23商机</td>
-                    <td class="tabs-fore3">5346</td>
+                    <td class="tabs-fore3">20‰</td>
+                    <td class="tabs-fore3">5129</td>
                 </tr>
                 <tr>
                     <td class="yuan-iocn color-bor5">初客牛排</td>
                     <td>78创业商机</td>
+                    <td class="tabs-fore3">20‰</td>
                     <td class="tabs-fore3">5129</td>
                 </tr>
                 <tr>
                     <td class="yuan-iocn color-bor6">平均转化</td>
                     <td>其他</td>
-                    <td class="tabs-fore3">5544</td>
-                </tr>
+                    <td class="tabs-fore3">20‰</td>
+                    <td class="tabs-fore3">5129</td>
+                </tr> -->
             </tbody>
         </table>
     </section>
@@ -201,12 +158,35 @@
         </ul>
     </section>
 </div>
+
 <script type="text/javascript" src="js/jquery-3.1.1.js"></script>    
 <script type="text/javascript" src="js/echarts.common.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/mobiscroll.core-2.5.2.js"></script>
 <script type="text/javascript" src="js/mobiscroll.datetime-2.5.1.js"></script>
+
+<script type="text/javascript">
+// 初始化数据
+$.dataFunction({
+    ajaxUrl : "https://guest.qudao.com/app/index_qs_data?",
+    caseType : "index-table"
+});
+$.headFunction({
+    ajaxUrl : "https://guest.qudao.com/app/index_jr_data?",
+    caseType : "index-table"
+});
+$.tabFunction({
+    ajaxUrl : "https://guest.qudao.com/app/getcustom?",
+    // ajaxUrl: "",
+    caseType : "index-table"
+});
+$.eCharts({
+    ajaxUrl : "https://guest.qudao.com/app/list_kf_kpi?",
+    caseType : "line"
+});
+</script>
+
 <script type="text/javascript">
 // tab
 $(".qiye-select li").tabJs({
@@ -214,22 +194,12 @@ $(".qiye-select li").tabJs({
     onClass: "active",
     ajaxUrl : "data2.json"
 });
-$(".right-li li").tabJs({
-    projectName: $(),
-    onClass: "select",
-    selectBoolean: false,
-    ajaxUrl : "data2.json"
-});
-$(".left-li li").tabJs({
-    projectName: $(),
-    onClass: "select",
-    ajaxUrl : "data2.json"
-});
 $(".project-control li").tabJs({
     projectName: $(),
     onClass: "select",
     ajaxUrl : "data2.json"
 });
+
 // 确认请求
 $("#date-btn").dateSearch({
     starDate : $("#txtStartDate"),
@@ -240,113 +210,137 @@ $("#project-btn").dateSearch({
     projectName: $(),
     ajaxUrl : "data2.json"
 });
-
-// $(".tit-c").tabJs({
-//     projectName: $(),
-//     caseType : "",
+// $(".txtNowDate").dateSearch({
 //     ajaxUrl : "data2.json"
 // });
-// 滚动设置
-$(function(){
-        $(".tit-c").find(".select-item").click(function(){
-            $(".box").show();//弹出层显示
-            $('#bg').on('touchmove', function (e) { e.preventDefault(); }, false);//弹出层的背景层阻止默认滑动事件
-            new IScroll('.contentBox');//
-        });
-        // $("#bg").click(function(){
-        //     $(".box").hide();
-        // });
-});
-
-// 初始化数据
-// $.dataFunction({
-//     ajaxUrl : "data2.json",
-//     caseType : "index-table"
+// $(".txtSevenDate").dateSearch({
+//     ajaxUrl : "data2.json"
 // });
-// 折线表格函数
-var myChart = echarts.init(document.getElementById('main'));
-var option= {
-    color: ['#24c6c9', '#ffaa62', '#b39be2','#00b419','#5f52a0'],
-    tooltip: {
-        trigger: 'axis'
-    },
-    grid: {
-        left: '0',
-        right: '25',
-        bottom: '3',
-        top:'13',
-        containLabel: true
-    },
-    xAxis: {
-        type: 'category',
-        nameLocation: 'middle',
-        boundaryGap: false,
-        splitLine:{//网格线
-            show: false,
-            lineStyle:{
-                color:['#b1b1b1'],
-                type:'dashed'
-            }
-        },
-        data: ['2.4','2.5','2.6','2.7','2.7']
-    },
-    yAxis: {
-        type: 'value',
-        axisLabel: {
-            formatter: '{value} %'
-        }
-    },
-    series: [
-        {
-            name:'78商机',
-            type:'line',
-            smooth: true,
-            data:['4','14','4','14','4'],
-            label: {
-                normal: {
-                    show: true,
-                    position: 'middle'//值显示
-                }
-            }
-        },
-        {
-            name:'23商机',
-            type:'line',
-            smooth: true,
-            lineStyle: {
-                normal:{
-                    type: 'dashed'
-                }
-            },
-            data:['8','9','8','7','8'],
-            label: {
-                normal: {
-                    show: true,
-                    position: 'top'
-                }
-            }
-        },
-        {
-            name:'89135创业小商机',
-            type:'line',
-            smooth: true,
-            data:['8','7','13','8','13'],
-            label: {
-                normal: {
-                    show: true,
-                    position: 'top'
-                }
-            }
-        }
-    ]
-};
-myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+// var json = [ { "value":12, "name":"东城区1" }, { "value":2, "name":"东城区2" }, { "value":5, "name":"东城区3" },{ "value":8, "name":"东城区4" },{ "value":3, "name":"东城区5" }]
+
+
+// var arr=[];
+// var arr2=[];
+//     for(k in json){
+//     arr.push(json[k].name);
+//     arr2.push(json[k].value)
+// }
+
+
+// console.log(arr2)
+// // 折线表格函数
+// var myChart = echarts.init(document.getElementById('main'));
+// var option= {
+//     color: ['#24c6c9', '#ffaa62', '#b39be2','#00b419','#5f52a0','red'],
+//     tooltip: {
+//         trigger: 'axis'
+//     },
+//     grid: {
+//         left: '0',
+//         right: '25',
+//         bottom: '3',
+//         top:'13',
+//         containLabel: true
+//     },
+//     xAxis: {
+//         type: 'category',
+//         nameLocation: 'middle',
+//         boundaryGap: false,
+//         axisLabel:{ //调整x轴的lable  
+//             textStyle:{
+//                 fontSize:20 // 让字体变大
+//             }
+//         },
+//         splitLine:{//网格线
+//             show: false,
+//             lineStyle:{
+//                 color:['#b1b1b1'],
+//                 type:'dashed'
+//             }
+//         },
+//         // data: ['2.4','2.5','2.6','2.7','2.7']//这个后台赛日期
+//         data: arr2
+//     },
+//     yAxis: {
+//         type: 'value',
+//         axisLabel: {
+//             formatter: '{value} ‰',
+//             textStyle:{
+//                 fontSize:20 // 让字体变大
+//             }
+//         }
+//     },
+//     series: [
+//         {
+//             name:arr[0],//项目名字
+//             type:'line',
+//             smooth: true,
+//             data:arr2,//后台值
+//             label: {
+//                 normal: {
+//                     show: true,
+//                     position: 'middle',
+//                     textStyle:{
+//                         fontSize:18 // 让字体变大
+//                     }
+//                 }
+//             }
+//         },
+//         {
+//             name:arr[1],
+//             type:'line',
+//             smooth: true,
+//             lineStyle: {
+//                 normal:{
+//                     type: 'dashed',
+//                     textStyle:{
+//                         fontSize:18 // 让字体变大
+//                     }
+//                 }
+//             },
+//             data:arr2,
+//             label: {
+//                 normal: {
+//                     show: true,
+//                     position: 'top',
+//                     textStyle:{
+//                         fontSize:18 // 让字体变大
+//                     }
+//                 }
+//             }
+//         },
+//         {
+//             name:arr[2],
+//             type:'line',
+//             smooth: true,
+//             data:arr2,
+//             label: {
+//                 normal: {
+//                     show: true,
+//                     position: 'top',
+//                     textStyle:{
+//                         fontSize:18 // 让字体变大
+//                     }
+//                 }
+//             }
+//         }
+//     ]
+// };
+// myChart.setOption(option);
+
+// for(var i=0;i<arr.length;i++){
+//     option.series[0].name=arr[i]
+// }
+
+// console.log(json.list)
+// option.series[0].setData(json.list);//数据填充到highcharts上面
 
 //初始化日期控件
 $("#txtStartDate").mobiscroll().date();
 $("#txtEndDate").mobiscroll().date();
-$("#txtStartDate2").mobiscroll().date();
-$("#txtEndDate2").mobiscroll().date();
 var opt = {
     preset: 'date', //日期
     lang: 'zh',
@@ -371,8 +365,9 @@ var opt = {
 };
 $("#txtStartDate").mobiscroll(opt);
 $("#txtEndDate").mobiscroll(opt);
-$("#txtStartDate2").mobiscroll(opt);
-$("#txtEndDate2").mobiscroll(opt);
+
+
+
 </script>
 </body>
 </html>
