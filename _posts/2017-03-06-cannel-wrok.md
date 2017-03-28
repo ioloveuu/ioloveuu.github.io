@@ -1,16 +1,8 @@
----layout: post
+---
+layout: post
 title: 入职总结(1)
 description: 这是我的入职的工作总结。
 category: blog
-comments:
-  - author:
-      type: github
-      displayName: ioloveuu
-      url: 'https://github.com/ioloveuu'
-      picture: 'https://avatars0.githubusercontent.com/u/20235825?v=3&s=73'
-    content: oooooooooowwww
-    date: 2017-03-28T12:01:22.146Z
-
 ---
 
 # 入职工作总结
