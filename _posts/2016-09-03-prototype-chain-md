@@ -1,0 +1,155 @@
+---
+layout: post
+title: 原型链的学习
+description: 本周工作总结。
+category: blog
+comments:
+  - author:
+      type: github
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars0.githubusercontent.com/u/20235825?v=3&s=73'
+    content: '&#x4ECA;&#x5929;&#x662F;3/28'
+    date: 2017-03-28T11:53:37.833Z
+  - author:
+      type: github
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars0.githubusercontent.com/u/20235825?v=3&s=73'
+    content: '&#x4ECA;&#x5929;&#x662F;4/14&#x3002;fkw'
+    date: 2017-04-14T10:00:30.325Z
+  - author:
+      type: github
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars0.githubusercontent.com/u/20235825?v=3&s=73'
+    content: fkus
+    date: 2017-04-14T10:02:06.164Z
+
+---
+  以前对于原型链真是一知半解，可能自己的理解能力不行，抱着红皮书一顿狂啃，还是云里雾里的。最近在网上看到一篇分析文章，顿时感觉贸然所悟，特意把这个写下来总结一下。
+  首先，在JS里有一个万物皆对象的传说，不提对单身狗的一万点暴击，这个对象也是有区别，手动斜眼。对象分为普通对象和函数对象。普通对象和函数对象都具有__proto__属性,这一点是相同的。但是普通对象不具有prototype，也就是所谓的原型对象。对了，还有另外一点，Function.prototype这个浓眉大眼的家伙也是没有原型对象的，这一点是吾辈十分欣慰的。那么这个原型对象是用来做什么的呢？当然不是秀恩爱了，prototype在JS中的主要作用是用于不同作用域中的继承。可以看看下面的经典代码：
+```
+    var person = function(name){
+     this.name = name
+    };
+    person.prototype.getName = function(){
+       return this.name; 
+    }
+    var man = new person(‘ioloveuu’);
+    man.getName(); //ioloveuu
+```
+  从这个例子可以看出，通过给person.prototype设置了一个函数对象的属性，而person实例出来的普通对象就继承了这个属性。那么继承是通过什么来传递的呢，总不能靠意念把。当然不是了，前面还说了一个叫__proto__的属性。我刚说过JS在创建对象的时候，都有一个叫做__proto__的内置属性，用于指向创建它的函数对象的原型对象prototype。以上面的例子为例：
+```
+    console.log(man.__proto__ === person.prototype) //true
+```
+  同样，person.prototype对象也有__proto__属性，它指向创建它的函数对象（Object）的prototype
+```
+  console.log(person.prototype.__proto__ === Object.prototype) //true
+```
+  然后Object.prototype对象也有__proto__属性，但它比较特殊，为null
+```
+  console.log(Object.prototype.__proto__) //null
+```
+总结下来就是这么一个传递链：
+```
+  man.__proto__ ==> person.prototype.__proto__ ==> Object.prototype.__proto__ ==> null
+```
+其执行时需要传一个callback的函数名到服务器端，服务器端拿到这个回调函数名，再将前端需要的数据用参数的形式返回到客户端，这里也要注意的是，此时传回的数据是string，而不是object，所以要用parseJSON进行相应的转换。这种方法十分简洁，但是如上面的代码所示，它只是封装到了success，所以需要人为添加全局捕获函数来处理跨域请求的错误状态：
+```
+$.ajaxSetup({
+    error: function (x, e) {
+//do something...
+        content.popWindows(x.status);
+        JsInvoke.error(x.status);
+        return false;
+    }
+});
+```
+上面是我封装的$.getJSON的error处理。另外由于交互数据的大小限制，这种实际基于get的方式也没有post方式处理的数据字节数大。因此我又按照华哥的要求，采用jQuery的$.ajax方法，如下：
+```
+$.ajax({
+        type:"POST",
+        data : opts.config,
+        url : reqUrl,
+        dataType: "jsonp",
+        success: function (json) {
+//do somethig
+},
+error:function(json){
+//do something
+}
+});
+```
+这里各项参数需要注意的data可以置空，也可以设置一个预处理的内容传入回调函数，另外dataType也应该设置为jsonp用来跨域。
+  此外，我还学习了另一种基于promise的跨域方法，其代码如下:
+```
+var getJSON = function(url) {
+  var promise = new Promise(function(resolve, reject){
+    var client = new XMLHttpRequest();
+    client.open("POST", url);
+    client.onreadystatechange = handler;
+    client.responseType = "json";
+    client.setRequestHeader("Accept", "application/json");
+    client.send();
+    function handler() {
+      if (this.readyState !== 4) {
+        return;
+      }
+      if (this.status === 200) {
+        resolve(this.response);
+      } else {
+        reject(new Error(this.statusText));
+      }
+    };
+  });
+  return promise;
+};
+getJSON("https://api.github.com/search/users?q=1").then(function(json) {
+  do somethig;
+}, function(error) {
+  do somethi;
+})
+```
+Promise是现在比较新的跨域方法，利用自身保存未来结束事件的特性来进行跨域操作，所以它可以获取异步操作的消息。Promise提供统一的API，各种异步操作都可以用同样的方法进行处理，这里我仅仅将其作为跨域的工具。像 vue resource等插件工具采取这种方法，另外还有await等方式等待我去仔细研究总结。
+2.在PC端首页的页面编写中，我经常会遇到把一些元素在一行排列显示，这时候通常会用到flaot,另外inline-block也可以达到要求，为了探寻它们的异同，我进行了了解与学习。inline-block把一个元素的容器inline展示，同时里面的内容block展示；inline属性使元素内联展示，内联元素设置宽度无效，相邻的inline元素会在一行显示不换行，直到本行排满为止。block的元素始终会独占一行，呈块状显示，可设置宽高。所以inline-block的元素就是宽高可设置，相邻的元素会在一行显示，直到本行排满。而float设置元素的浮动。当浮动时，相邻元素会根据自身大小，排满一行，如果父容器宽度不够则会换行。而设置了元素的浮动时，这个元素就脱离了文档流，相邻元素会呈环绕装排列但是应该记得要清除flaot。一般来说inline-block为布局首选，但是也有inline-block所不能涉及的一些业务需求，比如：有两个元素，我们需要一个向左，一个向右排列，这时候我们就只能用float来实现，浏览器的解析顺序是逐行解析，当设置两个元素的右浮动时，顺序在前面的元素会先被解析，他是右浮动，那么在前边的元素就先往右浮动占位置，后边的元素依次被解析到以后，才往右排列，左侧反之。
+还有一些总结由于没有彻底掌握消化和限于字数原因，本周的总结便是以上这些了，感谢阅读。
+
+<noscript>Please enable JavaScript to view the comment form powered by <a href="https://commentit.io/">Comm(ent|it)</a></noscript>
+<div id="commentit"></div>
+<script type="text/javascript">
+  /** CONFIGURATION VARIABLES **/
+  var commentitUsername = 'ioloveuu';
+  var commentitRepo = 'ioloveuu/ioloveuu.github.io';
+  var commentitPath = '{{ page.path }}';
+
+  /** DON'T EDIT FOLLOWING LINES **/
+  (function() {
+      var commentit = document.createElement('script');
+      commentit.type = 'text/javascript';
+      commentit.async = true;
+      commentit.src = 'https://commentit.io/static/embed/dist/commentit.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(commentit);
+  })();
+</script>
+  {%if page.comments %}
+  {% assign sorted_comments = (page.comments | sort: 'date') %}
+{% endif %}
+{% for c in sorted_comments %}
+  <div class="media">
+    <div class="media-left">
+      <img src="{{ c.author.picture }}" alt="{{ c.author.displayName}}" height="73" width="73">
+    </div>
+    <div class="media-body">
+      <p class="text-muted">
+        <a href="{{ c.author.url }}">{{ c.author.displayName }}</a>
+        on {{ c.date | date_to_string }}
+      </p>
+      <p>{{ c.content | newline_to_br }}</p>
+    </div>
+  </div>
+{% else %}
+  There are no comments on this post.
+{% endfor %}
+
+
