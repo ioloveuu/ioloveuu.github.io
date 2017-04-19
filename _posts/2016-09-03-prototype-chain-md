@@ -4,6 +4,27 @@ title: 原型链的学习
 description: 关于原型链的学习。
 category: blog
 comments:
+- author:
+      type: github
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars0.githubusercontent.com/u/20235825?v=3&s=73'
+    content: '&#x4ECA;&#x5929;&#x662F;3/28'
+    date: 2017-03-28T11:53:37.833Z
+  - author:
+      type: github
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars0.githubusercontent.com/u/20235825?v=3&s=73'
+    content: '&#x4ECA;&#x5929;&#x662F;4/14&#x3002;fkw'
+    date: 2017-04-14T10:00:30.325Z
+  - author:
+      type: github
+      displayName: ioloveuu
+      url: 'https://github.com/ioloveuu'
+      picture: 'https://avatars0.githubusercontent.com/u/20235825?v=3&s=73'
+    content: fkus
+    date: 2017-04-14T10:02:06.164Z
 ---
   以前对于原型链真是一知半解，可能自己的理解能力不行，抱着红皮书一顿狂啃，还是云里雾里的。最近在网上看到一篇分析文章，顿时感觉贸然所悟，特意把这个写下来总结一下。
   首先，在JS里有一个万物皆对象的传说，不提对单身狗的一万点暴击，这个对象也是有区别，手动斜眼。对象分为普通对象和函数对象。普通对象和函数对象都具有__proto__属性,这一点是相同的。但是普通对象不具有prototype，也就是所谓的原型对象。对了，还有另外一点，Function.prototype这个浓眉大眼的家伙也是没有原型对象的，这一点是吾辈十分欣慰的。那么这个原型对象是用来做什么的呢？当然不是秀恩爱了，prototype在JS中的主要作用是用于不同作用域中的继承。可以看看下面的经典代码：
